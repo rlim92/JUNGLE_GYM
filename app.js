@@ -4,6 +4,10 @@ const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
 const users = require("./routes/api/users");
 const bodyParser = require('body-parser');
+const passport = require('passport');
+app.use(passport.initialize());
+require('./config/passport')(passport);
+
 app.use(bodyParser.urlencoded({ extended: false })); // Request to Postman
 app.use(bodyParser.json()); // Respond to JSON requests
 
@@ -11,7 +15,6 @@ mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connected to mongoDB"))
   .catch(err => console.log(err));
-
 
 app.get("/", (req, res) => res.send("Welcome to Jungle Gym!"));
 app.use("/api/users", users);

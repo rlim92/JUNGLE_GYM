@@ -4,8 +4,18 @@ const User = require("../../models/User");
 const bcrypt = require("bcryptjs");
 const keys = require("../../config/keys");
 const jwt = require('jsonwebtoken');
+const passport = require('passport');
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
+
+router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
+    // res.json({
+    //   id: req.user.id,
+    //   handle: req.user.handle,
+    //   email: req.user.email
+    // })
+    res.send(req.user);
+})
 
 router.post ("/register", (req, res)=>{
     const { errors, isValid } = validateRegisterInput(req.body);
@@ -72,7 +82,6 @@ router.post ('/login', (req, res) => {
                             });
                         }
                         );
-                        res.json({msg: "Logged in"});
                     } else {
                         errors.password = "Incorrect password";
                         return res.status(400).json(errors);
