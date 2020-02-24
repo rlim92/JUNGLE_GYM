@@ -3,8 +3,11 @@ const app = express();
 const mongoose = require("mongoose");
 const db = require("./config/keys").mongoURI;
 const users = require("./routes/api/users");
+const exercises = require("./routes/api/exercises");
+const location = require("./routes/api/location");
 const bodyParser = require('body-parser');
 const passport = require('passport');
+const seed = require("./seed");
 app.use(passport.initialize());
 require('./config/passport')(passport);
 
@@ -18,6 +21,8 @@ mongoose
 
 app.get("/", (req, res) => res.send("Welcome to Jungle Gym!"));
 app.use("/api/users", users);
+app.use("/api/workout", exercises);
+app.use("/api/location", location);
 
 const port = process.env.PORT || 5000;
 

@@ -5,8 +5,8 @@ const bcrypt = require("bcryptjs");
 const keys = require("../../config/keys");
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
-const validateRegisterInput = require("../../validation/register");
-const validateLoginInput = require("../../validation/login");
+const validateRegisterInput = require("../../validation/user/register");
+const validateLoginInput = require("../../validation/user/login");
 
 router.get('/current', passport.authenticate('jwt', { session: false }), (req, res) => {
     // res.json({
