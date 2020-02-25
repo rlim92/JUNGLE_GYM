@@ -33,7 +33,7 @@ class SessionForm extends React.Component {
 	demoLogin() {
 		const email = this.demoEmail;
 		const password = this.demoPassword;
-		const Speed = 60;
+		const Speed = 30;
 		for (let i = 0; i < email.length; i++) {
 			setTimeout(() => {
 				this.setState({ email: this.state.email + email[i] });
@@ -117,10 +117,17 @@ class SessionForm extends React.Component {
 							placeholder="password"
 							onChange={this.update('password')}
 						/>
+						<input
+							className="input password"
+							type="password"
+							value={this.state.password2}
+							placeholder="repeat password"
+							onChange={this.update('password2')}
+						/>
 						{errors}
 						<button className="session-button">{this.props.formType}</button>
-						<p className="form-demo" onClick={this.loginDemo}>
-							Try out JungleGym !
+						<p className="form-demo" onClick={this.demoLogin}>
+							Try out JungleGym!
                         </p>
 					</form>
 				</div>
@@ -128,3 +135,5 @@ class SessionForm extends React.Component {
 		);
 	};
 }
+
+export default withRouter(SessionForm);
