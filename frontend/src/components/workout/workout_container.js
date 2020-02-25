@@ -3,13 +3,13 @@ import Workout from "./workout";
 
 const mSTP = (state, ownProps) => {
   return {
-    locations: state.entities.locations
+    // locations: state.entities.locations
   };
 };
 
 const mDTP = dispatch => {
   return {
-      fetchLocations: () => console.log("test");
+      fetchLocations: () => console.log("test")
   };
 };
 
