@@ -4,11 +4,19 @@ import sessionForm from './session_form';
 
 const mSTP = state => ({
 		signedIn: state.session.isSignedIn,
-		errors: state.errors.session
+		errors: state.errors.session,
+		formType: "signup",
+		session: {
+			email: "",
+			username: "",
+			password: "",
+			password2: "",
+			errors: {}
+		}
 });
 
 const mDTP = dispatch => ({
-	signup: user => dispatch(signup(user))
+	action: user => dispatch(signup(user))
 });
 
 export default connect(mSTP, mDTP)(sessionForm);
