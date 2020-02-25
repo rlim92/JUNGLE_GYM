@@ -16,7 +16,11 @@ mongoose
   .then(() => console.log("Connected to mongoDB"))
   .catch(err => console.log(err));
 
-app.get("/", (req, res) => res.send("Welcome to Jungle Gym!"));
+// app.get("/", (req, res) => res.send("Welcome to Jungle Gym!"));
+app.get("/", (req, res) =>
+  res.sendFile("frontend/public/index.html", { root: __dirname })
+);
+// const frontendApp = require("./frontend/src/jungle_gym.jsx")
 app.use("/api/users", users);
 
 const port = process.env.PORT || 5000;

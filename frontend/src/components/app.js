@@ -1,17 +1,20 @@
 import React from 'react';
-import { AuthRoute, ProtectedRoute } from '../util/route_util';
-import { Switch } from 'react-router-dom';
+import { AuthRoute, ProtectedRoute } from '../util/route_api';
+import { Switch, Route } from 'react-router-dom';
 
 import MainPage from './main/main_page';
 import LoginFormContainer from './session/login_form_container';
 import SignupFormContainer from './session/signup_form_container';
 
-const App = () => (
+const App = () => {
+	return (
 	<Switch>
-		<AuthRoute exact path="/" componenet={MainPage}/>
-		<AuthRoute exact path="/login" componenet={LoginFormContainer}/>
+		<Route exact path="/" component={MainPage}/>
+		<AuthRoute exact path="/login" component={LoginFormContainer}/>
 		<AuthRoute eact path="/signup" component={SignupFormContainer}/>
 	</Switch>
-);
+	)
+};
+
 
 export default App;
