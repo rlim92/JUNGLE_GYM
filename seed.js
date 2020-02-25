@@ -1,6 +1,6 @@
 const Exercise = require("./models/Exercise");
 
-const exercises = [
+const exercises = [ 
     {
         name: "Pushup",
         categories: "upperbody",
@@ -10,21 +10,63 @@ const exercises = [
     }, {
         name: "Pullup",
         categories: "upperbody",
-        description: "Find some monkey bars that you can hang from. From a dead hang with your arms, pull yourself up until your chin reaches the height of the bar. Control your descent. Repeat.",
+        description: "Grab the bar with a underhand grip at shoulder length width and fully extend your arms. Pull yourself up until your chin has cleared the bar. Slowly release and go back to the starting position",
         reps: 5,
         seconds: null
     }, {
-        name: "Burpee",
+        name: "Inverted Bodyweight Row",
         categories: "upperbody",
-        description: "Start in a low squat position with your hands on the floor. Next, kick your feet back to a push-up position. Complete one push- up, then immediately return your feet to the squat position. Leap up as high as possible before squatting and moving back into the push - up portion of the show.",
+        description: "Set the bar(or your rings) around chest height. Postion yourself under the bar Grasp the bar with arms slightly wider than shoulder width. Put your feet out in front of you so that your upper chest is directly under the bar. Pull yourself towards the bar until your elbows are bent as less than 45 degrees. Pause and then slowly lower your self back to the starting position.",
         reps: 5,
         seconds: null
+    }, {
+        name: "Half-Pullup",
+        categories: "upperbody",
+        description: "Grab the bar with a underhand grip at shoulder length width and fully extend your arms. Pull yourself up until your elbows have bent 45 degrees. Pause and then slowly go back to the starting position",
+        reps: 5,
+        seconds: null
+    }, {
+        name: "Bar Hang",
+        categories: "core",
+        description: "Grab the bar at shoulder length width and fully extend your arms. Keep your core stable and do your best to not swing around",
+        reps: null,
+        seconds: 45
     }, {
         name: "Plank",
         categories: "core",
         description: "Lie facedown with forearms on the floor and hands clasped. Extend legs behind you and rise up on toes. Keeping back straight, tighten core and hold the position for 30 to 60 seconds (or as long as you can hang).",
         reps: null,
         seconds: 30
+    }, {
+        name: "Leg Raise",
+        categories: "core",
+        description: "Lie down on your back and your hands slightly away from your body to support yourself. Lift your legs upwards while keeping them together until your butt has left the floor. Slowly go back to the starting position",
+        reps: 5,
+        seconds: null
+    }, {
+        name: "Knees To Elbows Hang",
+        categories: "core",
+        description: "Grab the bar at shoulder length width and fully extend your arms. Keep your core stable and do your best to not swing around. Slowly bring your knees to your elbows then slowly go back to the starting position",
+        reps: 8,
+        seconds: null
+    }, {
+        name: "Jumping Jacks",
+        categories: "core",
+        description: "Stand upright with your legs together, arm at your sides. Bend your knees slightly and jump into the air. As you jump, spread your legs to be about shoulder-width apart. Stretch your arms out and over your head. Jump back to the starting position",
+        reps: null,
+        seconds: 45
+    }, {
+        name: "Burpee",
+        categories: "core",
+        description: "Start in a low squat position with your hands on the floor. Next, kick your feet back to a push-up position. Complete one push- up, then immediately return your feet to the squat position. Leap up as high as possible before squatting and moving back into the push - up portion of the show.",
+        reps: 5,
+        seconds: null
+    }, {
+        name: "Jumping Knee Tuck",
+        categories: "lower body",
+        description: "Jump in place using your arms to stablize yoruself. Make sure your knees are brought as high as possible. The best is if your knees touch your elbows.",
+        reps: null,
+        seconds: 45
     }, {
         name: "Wall sit",
         categories: "lowerbody",
