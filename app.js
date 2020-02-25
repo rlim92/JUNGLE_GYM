@@ -7,7 +7,6 @@ const exercises = require("./routes/api/exercises");
 const location = require("./routes/api/location");
 const bodyParser = require('body-parser');
 const passport = require('passport');
-const seed = require("./seed");
 app.use(passport.initialize());
 require('./config/passport')(passport);
 
@@ -18,6 +17,9 @@ mongoose
   .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log("Connected to mongoDB"))
   .catch(err => console.log(err));
+
+// const Seed = require("./seed");
+// Seed(db);
 
 app.get("/", (req, res) => res.send("Welcome to Jungle Gym!"));
 app.use("/api/users", users);

@@ -45,15 +45,16 @@ const exercises = [
         seconds: null
     },]
 
-module.exports = () => {
-    Exercise.remove({});
+module.exports = (db) => {
+    // Exercise.findByIdAndRemove({});
+    Exercise.deleteMany({}).exec();
     for (let i = 0; i < exercises.length; i++) {
         const newExercise = new Exercise({
-            name: seed[i]["name"],
-            category: seed[i]["categories"],
-            description: seed[i]["description"],
-            reps: seed[i]["reps"],
-            seconds: seed[i]["seconds"]
+            name: exercises[i]["name"],
+            category: exercises[i]["categories"],
+            description: exercises[i]["description"],
+            reps: exercises[i]["reps"],
+            seconds: exercises[i]["seconds"]
         })
         newExercise.save()
     }
