@@ -3,12 +3,12 @@ import ReactDOM from 'react-dom';
 import Root from './components/root';
 import configureStore from './store/store';
 import jwt_decode from 'jwt-decode';
-import { setAuthToken } from './util/session_api_util';
+import { setAuthToken } from './util/session_api';
 import { logout } from './actions/session_actions';
 import { set } from 'mongoose';
 
 document.addEventListener("DOMContentLoaded", () => {
-	let store;
+	let store = "";
 
 	//check if user has session token stored in local storage
 	if (localStorage.jwtToken) {
@@ -24,10 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
 			store.dispatch(logout());
 			window.location.href = '/login';
 		}
-		} else {
-			store = configureStore({});
+	} else {
+		store = configureStore();
 	}
 
 	const root = document.getElementById('root');
 	ReactDOM.render(<Root store={store}/>, root)
+	// ReactDOM.render(<h1>Replaced</h1>, root)
 })

@@ -1,5 +1,6 @@
 import React from "react";
 import MarkerManager from "../../util/marker_manager";
+import WorkoutRoutine from "./workout_routine";
 
 class Workout extends React.Component {
   constructor(props) {
@@ -12,17 +13,17 @@ class Workout extends React.Component {
           zoom: 13
       }
 
-      this.map = new google.maps.Map(this.mapNode, mapOptions)
+      // this.map = new google.maps.Map(this.mapNode, mapOptions)
       this.props.fetchLocations();
       // this.MarkerManager = new MarkerManager(this.map, this.props.locations);
   }
   render() {
-    if (this.props.location && !this.MarkerManager) {
-      this.MarkerManager = new MarkerManager(this.map, this.props.locations);
-    }
+    // if (this.props.location && !this.MarkerManager) {
+    //   this.MarkerManager = new MarkerManager(this.map, this.props.locations);
+    // }
     return <>
         <WorkoutRoutine workouts={this.props.workouts} />
-        <div id="map" ref={map => this.mapNode = map}></div>;
+        <div id="map" ref={map => this.mapNode = map}></div>
     </>
   }
 }

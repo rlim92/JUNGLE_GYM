@@ -1,4 +1,4 @@
-import { connect } from "mongoose";
+import { connect } from "react-redux";
 import Workout from "./workout";
 
 const mSTP = (state, ownProps) => {
