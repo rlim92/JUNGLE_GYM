@@ -1,3 +1,5 @@
+const mapsKey = require("../../config/keys_prod").mapsKey;
+
 module.exports = {
-    mapsKey: process.env.MAPS_KEY
+    mapsKey: mapsKey
 }
