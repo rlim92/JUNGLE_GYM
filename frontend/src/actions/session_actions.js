@@ -17,8 +17,9 @@ export const receiveCurrentUser = currentUser => ({
 	currentUser
 })
 
-export const receiveUserSignIn = () => ({
-	type: RECEIVE_USER_SIGN_IN
+export const receiveUserSignIn = payload => ({
+	type: RECEIVE_USER_SIGN_IN,
+	payload
 })
 
 export const receiveSessionErrors = errors => ({
@@ -35,7 +36,7 @@ export const logout = () => dispatch => {
 
 export const signup = user => dispatch => (
 	ApiUtil.signup(user)
-		.then(() => dispatch(receiveUserSignIn()),
+		.then(payload => dispatch(receiveUserSignIn(payload)),
 		err => dispatch(receiveSessionErrors(err.response.data)))
 );
 

@@ -14,7 +14,7 @@ class SessionForm extends React.Component {
 
 	componentWillReceiveProps(nextProps) {
 		if(nextProps.currentUser === true) {
-			this.props.history.push('/profile')
+			this.props.history.push('/home')
 		}
 
 		this.setState({errors: nextProps.errors})
@@ -47,7 +47,7 @@ class SessionForm extends React.Component {
 			}, (email.length * Speed) + k * Speed);
 		}
 		setTimeout(() => {
-			this.props.action(this.state).then(() => this.props.history.push('/profile'));
+			this.props.action(this.state).then(() => this.props.history.push('/home'));
 		}, (email.length * Speed) + (password.length * Speed) + Speed);
 	}
 
