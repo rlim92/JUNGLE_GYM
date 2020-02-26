@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const Exercise = require("../../models/Exercise");
 
-router.get("/", (req, res)=>{
+router.get("/random", (req, res)=>{
     const limit = 3;
     const query = (req.body.category) ? {category: req.body.category} : {};
     Exercise.find(query).then(exercises => {
@@ -24,8 +24,12 @@ router.get("/", (req, res)=>{
     })
 })
 
+router.get("/", (req,res)=>{
+    Exercise.find({}).then(all => res.json(all));
+})
+
 router.get("/:id", (req, res)=>{
-    res.send(`Exercise # ${req.params.id}`)
+    Exercise.findOne({_id: req.params.id}).then(exercise => res.json(exercise));
 })
 
 

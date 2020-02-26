@@ -24,7 +24,7 @@ class Workout extends React.Component {
     return <>
         <WorkoutRoutine workouts={this.props.workouts} />
         {/* <div id="map" ref={map => this.mapNode = map}></div> */}
-        <Map />
+        <Map fetchLocations={this.props.fetchLocations} locations={this.props.locations}/>
     </>
   }
 }
