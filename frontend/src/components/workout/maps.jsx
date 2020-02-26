@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 // import MarkerManager from "../../util/marker_manager";
-if(process.env.NODE_ENV === "production"){
-    const mapsKey = require("../../mapkey").mapsKey;
-} else {
-    const mapsKey = require("../../mapkey").mapsKey;
-}
+const mapsKey = require("../../mapkey").mapsKey;
 // const mapsKey = require("../../../config/keys").mapsKey;
 // import Marker from './marker';
 
