@@ -38,17 +38,24 @@ router.post ("/register", (req, res)=>{
                     bcrypt.hash(newUser.password, salt, (err,hash) => {
                         if (err) throw err;
                         newUser.password = hash;
-                        newUser.save()
-                            .then( user => {
-                                payload = {id: user.id, username: user.username};
-                                jwt.sign(payload, keys.secretOrKey, {expiresIn: 3600}, (err, token)=>{
-                                    res.json({
-                                        success: true,
-                                        token: "Bearer " + token
-                                    })
-                                })
-                            })
-                            .catch( err => console.log(err) );
+                        newUser.save().then(
+                          user => {
+                            payload = { id: user.id, username: user.username };
+                            jwt.sign(
+                              payload,
+                              keys.secretOrKey,
+                              { expiresIn: 3600 },
+                              (err, token) => {
+                                res.json({
+                                  success: true,
+                                  token: "Bearer " + token
+                                });
+                              }
+                            );
+                          },
+                          err => res.status(400).json(err)
+                        );
+
                     })
                 })
 

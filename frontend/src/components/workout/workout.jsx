@@ -1,5 +1,4 @@
 import React from "react";
-import MarkerManager from "../../util/marker_manager";
 import WorkoutRoutine from "./workout_routine";
 import Map from "./maps";
 
