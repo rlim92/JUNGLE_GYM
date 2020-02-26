@@ -22,7 +22,6 @@ export default function (state = initialState, action) {
         user: undefined
       };
     case RECEIVE_USER_SIGN_IN:
-      debugger
       localStorage.setItem("jwt", action.payload.data.token)
       return {
         ...state,
