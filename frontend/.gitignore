@@ -10,6 +10,7 @@
 
 # production
 /build
+mapkey_dev.js
 
 # misc
 .DS_Store
