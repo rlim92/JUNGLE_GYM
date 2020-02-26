@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
 import { signup } from '../../actions/session_actions';
 import sessionForm from './session_form';
-import { clearErrors } from '../../actions/error_action';
+import { receiveSessionErrors } from "../../actions/session_actions";
+import { clearErrors } from "../../actions/error_action";
 
 const mSTP = state => ({
 		signedIn: state.session.isSignedIn,
-		errors: state.errors.session,
+		errors: Object.values(state.errors.session),
 		formType: "signup",
 		session: {
 			email: "",
@@ -16,8 +17,8 @@ const mSTP = state => ({
 });
 
 const mDTP = dispatch => ({
-	action: user => dispatch(signup(user)),
-	clearErrors: () => dispatch(clearErrors())
+  action: user => dispatch(signup(user)),
+  clearErrors: () => dispatch(clearErrors())
 });
 
 export default connect(mSTP, mDTP)(sessionForm);

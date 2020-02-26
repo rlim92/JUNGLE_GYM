@@ -14,7 +14,7 @@ class SessionForm extends React.Component {
 
 	componentWillReceiveProps(nextProps) {
 		if(nextProps.currentUser === true) {
-			this.props.history.push('/workout')
+			this.props.history.push('/profile')
 		}
 
 		this.setState({errors: nextProps.errors})
@@ -27,7 +27,9 @@ class SessionForm extends React.Component {
 	handleSubmit(e) {
 		e.preventDefault()
 
+
 		this.props.action(this.state);
+		
 	}
 
 	demoLogin() {
@@ -45,24 +47,23 @@ class SessionForm extends React.Component {
 			}, (email.length * Speed) + k * Speed);
 		}
 		setTimeout(() => {
-			this.props.action(this.state).then(() => this.props.history.push('/workout'));
+			this.props.action(this.state).then(() => this.props.history.push('/profile'));
 		}, (email.length * Speed) + (password.length * Speed) + Speed);
 	}
 
 	componentWillUnmount() {
-		if (this.props.errors.length) {
 			this.props.clearErrors();
-		}
 	}
 
 	render() {
 		let usernameInput = "";
+		let password2 = "";
 		let prompt = (<span className="form-prompt">
 			Enter <strong>email</strong> and <strong>password</strong>.
         </span>)
-		if (this.props.formType === 'Sign up') {
+		if (this.props.formType === 'signup') {
 			prompt = (<span className="form-prompt">
-				Enter <strong>email</strong>, <strong>username</strong> and <strong>password</strong>.
+				Enter <strong>email</strong>, <strong>username</strong>, <strong>password</strong>, <strong>confirm password</strong>
             </span>)
 			usernameInput = (
 				<input
@@ -73,15 +74,24 @@ class SessionForm extends React.Component {
 					onChange={this.update('username')}
 				/>
 			);
+			password2 = (
+				<input 
+					className="input password2"
+					type="password"
+					value={this.state.password2}
+					placeholder="confirm password"
+					onChange={this.update('password2')}
+				/>
+			)
 		};
 
 		let errors = "";
 		const inputs = document.getElementsByClassName('input')
 
 		if (this.props.errors.length) {
-			errors = this.props.errors.map(error => {
+			errors = this.props.errors.map((error, i) => {
 				return (
-					<p className='errors' >{error}!</p>
+					<p  key={`error+${i}`} className='errors' >{error}!</p>
 				)
 			})
 			for (let i = 0; i < inputs.length; i++) {
@@ -90,42 +100,47 @@ class SessionForm extends React.Component {
 		} else {
 			for (let i = 0; i < inputs.length; i++) {
 				if (inputs[i].classList.contains('error')) {
-					inputs[i].classList.remove('error');
+					inputs[i].classList.remove('error'); 
 				}
 			}
 		};
+
+		let demoButton = <button 
+												className="form-demo" 
+												onClick={this.demoLogin}>
+              						Try out JungleGym !
+            					</button>
 		return (
-			<div className="outer-session-div">
-				<div className="session-form-container">
-					<form className="session-form" onSubmit={this.handleSubmit}>
-						<h3 className="input-title">{this.props.formType}</h3>
-						<div className="prompt-holder">
-							{prompt}
-						</div>
-						<input
-							className="input email"
-							type="text"
-							value={this.state.email}
-							placeholder="you@junglegym.com"
-							onChange={this.update('email')}
-						/>
-						{usernameInput}
-						<input
-							className="input password"
-							type="password"
-							value={this.state.password}
-							placeholder="password"
-							onChange={this.update('password')}
-						/>
-						{errors}
-						<button className="session-button">{this.props.formType}</button>
-						<p className="form-demo" onClick={this.loginDemo}>
-							Try out JungleGym !
-                        </p>
-					</form>
-				</div>
-			</div>
-		);
+      <div className="outer-session-div">
+        <div className="session-form-container">
+          <form className="session-form" onSubmit={this.handleSubmit}>
+            <h3 className="input-title">{this.props.formType}</h3>
+            <div className="prompt-holder">{prompt}</div>
+            <div className="inputWrapper">
+              <input
+                className="input email"
+                type="text"
+                value={this.state.email}
+                placeholder="you@junglegym.com"
+                onChange={this.update("email")}
+              />
+              {usernameInput}
+              <input
+                className="input password"
+                type="password"
+                value={this.state.password}
+                placeholder="password"
+                onChange={this.update("password")}
+              />
+							{password2}
+            </div>
+            {errors}
+            <button className="session-button">{this.props.formType}</button>
+						{this.props.formType === 'login' ? demoButton : ""}
+          </form>
+        </div>
+      </div>
+    );
 	};
 }
 
