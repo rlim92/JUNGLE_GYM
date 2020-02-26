@@ -4,7 +4,7 @@ import Workout from "./workout";
 const mSTP = (state, ownProps) => {
   return {
     // locations: state.entities.locations
-  };
+  }
 };
 
 const mDTP = dispatch => {
