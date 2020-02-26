@@ -15,7 +15,6 @@ class Map extends Component {
             count: 0
         }
         this.createRoute = this.createRoute.bind(this);
-        window.setState = this.setState.bind(this);
     }
     static defaultProps = {
         center: {
@@ -32,8 +31,6 @@ class Map extends Component {
     bindMaps(map, maps) {
         this.map = map;
         this.maps = maps;
-        window.map = map;
-        window.maps = maps;
     }
 
     createRoute(e){
@@ -89,23 +86,22 @@ class Map extends Component {
 
     render() {
         return (
-        // Important! Always set the container height explicitly
-        <div style={{ height: "500px", width: "500px" }}>
-            <GoogleMapReact
-            bootstrapURLKeys={{
-                key: ""
-            }}
-            defaultCenter={this.props.center}
-            defaultZoom={this.props.zoom}
-            yesIWantToUseGoogleMapApiInternals
-            onGoogleApiLoaded={({ map, maps }) => {
-                this.bindMaps(map, maps);
-                if (this.props.locations.length > 0) {
-                    this.loadMarkers(map, maps);
-                }
-            }}
-            />
-        </div>
+            // Important! Always set the container height explicitly
+            <div style={{ height: "500px", width: "500px" }}>
+                <GoogleMapReact
+                bootstrapURLKeys={{
+                    key: "AIzaSyA1wQa_RXdmohpV9nw1nc7yVDscBcbe10g"
+                }}
+                defaultCenter={this.props.center}
+                defaultZoom={this.props.zoom}
+                yesIWantToUseGoogleMapApiInternals
+                onGoogleApiLoaded={({ map, maps }) => {
+                    this.bindMaps(map, maps);
+                    if (this.props.locations.length > 0) {
+                        this.loadMarkers(map, maps);
+                    }
+                }}/>
+            </div>
         );
     }
 }
