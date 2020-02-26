@@ -1,6 +1,7 @@
 import React from "react";
 import MarkerManager from "../../util/marker_manager";
 import WorkoutRoutine from "./workout_routine";
+import Map from "./maps";
 
 class Workout extends React.Component {
   constructor(props) {
@@ -23,7 +24,8 @@ class Workout extends React.Component {
     // }
     return <>
         <WorkoutRoutine workouts={this.props.workouts} />
-        <div id="map" ref={map => this.mapNode = map}></div>
+        {/* <div id="map" ref={map => this.mapNode = map}></div> */}
+        <Map />
     </>
   }
 }
