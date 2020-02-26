@@ -87,7 +87,7 @@ const exercises = [
         seconds: null
     },]
 
-module.exports = (db) => {
+module.exports = () => {
     // Exercise.findByIdAndRemove({});
     Exercise.deleteMany({}).exec();
     for (let i = 0; i < exercises.length; i++) {
