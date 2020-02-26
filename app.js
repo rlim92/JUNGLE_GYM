@@ -29,8 +29,8 @@ mongoose
 
 // const frontendApp = require("./frontend/src/jungle_gym.jsx")
 app.use("/api/users", users);
-app.use("/api/workout", exercises);
-app.use("/api/location", location);
+app.use("/api/exercises", exercises);
+app.use("/api/locations", location);
 // app.get("/", (req, res) => res.send("Welcome to Jungle Gym!"));
 // app.use("/", (req, res) =>
 //   res.sendFile("frontend/public/index.html", { root: __dirname })
