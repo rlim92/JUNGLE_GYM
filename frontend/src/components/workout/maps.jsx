@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import MarkerManager from "../../util/marker_manager";
 // const mapsKey = require("../../../config/keys").mapsKey;
+const mapkey = require("../../mapkey").MAPS_KEY;
 // import Marker from './marker';
 
 const Mark = ({ text }) => <div>{text}</div>;
@@ -93,7 +94,7 @@ class Map extends Component {
         <div style={{ height: "500px", width: "500px" }}>
             <GoogleMapReact
             bootstrapURLKeys={{
-                key: ""
+                key: mapkey
             }}
             defaultCenter={this.props.center}
             defaultZoom={this.props.zoom}
