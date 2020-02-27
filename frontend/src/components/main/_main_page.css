@@ -35,16 +35,15 @@ input, h1, p, div {
   justify-content: center; */
   /* padding-top: 30px; */
   overflow: hidden;
-  
 }
 
 .splash-photo{
   /* border-radius: 15px; */
   /* height: calc( 100vh - 90px);
   width: auto; */
-  /* height: 100%;
-  width: 100%; */
-  margin-top: -300px;
-  clip: rect(0px, 500px, 1000px, 0px);
+  height: auto;
+  width: 100%;
+  margin-top: -30vh;
+
 }
 

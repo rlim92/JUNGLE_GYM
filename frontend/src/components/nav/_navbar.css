@@ -1,8 +1,9 @@
 .navBar{
   display: flex;
-  margin: 20px;
+  padding: 20px;
   justify-content: space-between;
-  font-family: "Maison Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
+  background-color: #212121;
 }
 
 .navBar-links{
@@ -20,7 +21,7 @@
   height: 40px;
   min-width: 100px;
   background-color:darkslategray;
-  font-family: "Maison Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 18px;
@@ -37,7 +38,7 @@
 
 .navBar-title{
   color: antiquewhite;
-  font-family: "Maison Neue", "Segoe UI", Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 
