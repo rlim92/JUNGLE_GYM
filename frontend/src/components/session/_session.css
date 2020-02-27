@@ -178,6 +178,7 @@ input {
 
 .input-title {
 	color: white;
+	font-size: 26px;
 	font-family: "Roboto", sans-serif;
 }
 
@@ -197,6 +198,26 @@ input {
 
 .input {
 	font-family: "Roboto", sans-serif;
+	margin-bottom: 20px;
+}
+
+.reRoute {
+	display: flex;
+	flex-direction: row;
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+.reRoute span > a {
+	color: white;
+	text-decoration: none;
+	
+}
+
+.linkContainer {
+	display: flex;
+	flex-direction: column;
 }
 
 /* .pass {

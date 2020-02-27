@@ -62,9 +62,9 @@ class SessionForm extends React.Component {
 		let prompt = (<span className="form-prompt">
 			Enter <strong>email</strong> and <strong className="pass">password</strong>.
         </span>)
-		if (this.props.formType === 'signup') {
+		if (this.props.formType === 'Signup') {
 			prompt = (<span className="form-prompt">
-				Enter <strong>email</strong>, <strong>username</strong>, <strong className="pass">password</strong>, <strong>confirm password</strong>
+				Enter <strong>email</strong>, <strong>username</strong>, <strong className="pass">password</strong>
             </span>)
 			usernameInput = (
 				<input
@@ -139,8 +139,13 @@ class SessionForm extends React.Component {
 								{password2}
 							</div>
 							{errors}
-							<button className="session-button">{this.props.formType}</button>
-							{this.props.formType === 'Login' ? demoButton : ""}
+							<div className="linkContainer">
+								<button className="session-button">{this.props.formType}</button>
+								{this.props.formType === 'Login' ? demoButton : ""}
+								<div className="reRoute">
+									<p>{this.props.sessionText} <span>{this.props.navLink}</span> </p>
+								</div>
+							</div>
 						</div>
           </form>
         </div>

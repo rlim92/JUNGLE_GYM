@@ -3,11 +3,15 @@ import { login } from '../../actions/session_actions';
 import SessionForm from './session_form';
 import { receiveSessionErrors } from '../../actions/session_actions';
 import { clearErrors } from '../../actions/error_action';
+import { Link } from 'react-router-dom';
+import React from 'react';
 
 const mapStateToProps = (state) => {
   return {
     errors: Object.values(state.errors.session),
     formType: "Login",
+    navLink: <Link to={'/signup'}>here</Link>,
+    sessionText: "Sign up",
     session: {
       email: "",
       password: ""
