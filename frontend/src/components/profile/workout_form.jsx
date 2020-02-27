@@ -19,7 +19,7 @@ class Workout extends React.Component {
 
   update(field) {
     // debugger;
-    console.log(this.state)
+    // console.log(this.state)
     return e => this.setState({ [field]: e.currentTarget.value })
     
   }
