@@ -177,7 +177,7 @@ input {
 }
 
 .form-demo:hover {
-	text-decoration: underline;
+	color: blanchedalmond;
 }
 
 .input-title {
@@ -219,12 +219,13 @@ input {
 
 .reRoute span > a {
 	color: white;
+	/* color: blanchedalmond; */
 	text-decoration: none;
 	
 }
 
 .reRoute span > a:hover {
-	text-decoration: underline;
+	color: blanchedalmond;
 }
 
 .linkContainer {
