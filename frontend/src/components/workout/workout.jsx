@@ -12,7 +12,7 @@ class Workout extends React.Component {
     //   this.MarkerManager = new MarkerManager(this.map, this.props.locations);
     // }
     return <>
-        <WorkoutRoutine workouts={this.props.workouts} />
+        <WorkoutRoutine />
         {/* <div id="map" ref={map => this.mapNode = map}></div> */}
         <Map fetchLocations={this.props.fetchLocations} locations={this.props.locations}/>
     </>

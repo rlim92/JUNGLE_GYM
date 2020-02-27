@@ -4,15 +4,13 @@ import { fetchExercises } from '../../actions/exercises_actions';
 
 const mSTP = (state) => {
     return {
-        exercises: state.entities.exercises,
-        locations: state.entities.locations,
-        userWorkout: state.entities.workout
+        exercises: state.entities.exercises
     };
 };
 
 const mDTP = dispatch => {
     return {
-        fetchWorkout: () => dispatch(fetchWorkout())
+        // fetchWorkout: () => dispatch(fetchWorkout())
     };
 };
 

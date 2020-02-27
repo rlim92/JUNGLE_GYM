@@ -1,5 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
+import SessionCSS from './_session.css';
 
 class SessionForm extends React.Component {
 	constructor(props) {

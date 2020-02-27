@@ -26,7 +26,10 @@ class Workout extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     // debugger;
-    this.props.fetchExercises(this.state);
+    this.props.fetchExercises(this.state)
+      .then(
+        this.props.history.push('/workout')
+      )
 
   }
 

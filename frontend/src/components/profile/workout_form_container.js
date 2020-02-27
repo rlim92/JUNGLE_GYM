@@ -2,6 +2,10 @@ import { connect } from "react-redux";
 import WorkoutForm from "./workout_form";
 import { fetchExercises } from '../../actions/exercises_action';
 
+const mSTP = (state, ownProps) => {
+    return {}
+}
+
 
 const mDTP = dispatch => {
     return {
@@ -9,4 +13,4 @@ const mDTP = dispatch => {
     };
 };
 
-export default connect(null, mDTP)(WorkoutForm);
+export default connect(mSTP, mDTP)(WorkoutForm);
