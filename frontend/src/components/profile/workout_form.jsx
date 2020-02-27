@@ -61,8 +61,8 @@ class Workout extends React.Component {
                     </label>
                   </div>
                   <label className="Dropdown">
-                    Choose a category
                     <select onChange={this.update("category")} className="workoutList">
+                      <option default hidden>Choose a category</option>
                       <option value="Core" >
                         Core
                       </option>

@@ -12,7 +12,10 @@ class Map extends Component {
         this.bindMaps = this.bindMaps.bind(this);
         this.state={
             count: 0,
-            userPos: null,
+            userPos: {
+                lat: 40.752067,
+                lng: -73.981637
+            },
             gotMaps: false
         }
         this.createRoute = this.createRoute.bind(this);
@@ -35,6 +38,15 @@ class Map extends Component {
     bindMaps(map, maps) {
         this.map = map;
         this.maps = maps;
+        this.currentUserMark = new this.maps.Marker({
+            position: this.state.userPos,
+            map: this.map,
+            title: "Origin",
+            icon: {
+                path: this.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+                scale: 6
+            }
+        });
         this.setState({gotMaps: true});
     }
 
@@ -98,18 +110,19 @@ class Map extends Component {
                 this.map.setZoom(14);
                 this.setState({ userPos })
                 window.state = this.state;
-                if(this.currentUserMark===null){
-                    new this.maps.Marker({
-                        position: userPos,
-                        map: this.map,
-                        title: "Origin",
-                        // label: "You"
-                        icon: {
-                            path: this.maps.SymbolPath.BACKWARD_OPEN_ARROW,
-                            scale: 6
-                        }
-                    })
+                if(this.currentUserMark){
+                    this.currentUserMark.setMap(null);
                 }
+                this.currentUserMark = new this.maps.Marker({
+                    position: userPos,
+                    map: this.map,
+                    title: "Origin",
+                    // label: "You"
+                    icon: {
+                        path: this.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+                        scale: 6
+                    }
+                })
             }, err => console.log(err), { timeout: 10000 })
         }
         return (
