@@ -7,7 +7,7 @@ class SessionForm extends React.Component {
 		super(props)
 
 		this.state = this.props.session
-		this.demoEmail = "KaiYipIsJacked@workout.com";
+		this.demoEmail = "demo_user@demo.com";
 		this.demoPassword = "workout123";
 		this.demoLogin = this.demoLogin.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
@@ -106,11 +106,11 @@ class SessionForm extends React.Component {
 			}
 		};
 
-		let demoButton = <button 
+		let demoButton = <div 
 												className="form-demo" 
 												onClick={this.demoLogin}>
               						Try out JungleGym !
-            					</button>
+            					</div>
 		return (
       <div className="outer-session-div">
         <div className="session-form-container">

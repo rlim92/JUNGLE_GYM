@@ -172,6 +172,7 @@ input {
 	background-color: transparent;
 	border: none;
 	font-family: "Roboto", sans-serif;
+
 }
 
 .form-demo:hover {
@@ -228,6 +229,7 @@ input {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	
 }
 
 .prompt-holder {
