@@ -15,3 +15,30 @@ input, h1, p, div {
   padding: 0;
 }
 
+.main-page-container{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  flex-direction: column;
+  background-color: #212121;
+}
+
+.nav-bar-container{
+  display: flex;
+  flex-direction: column;
+  height: 10vh;
+  width: 100vw;
+}
+
+.photo-container{
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+
+.splash-photo{
+  /* border-radius: 15px; */
+  height: 100%;
+  width: 100%;
+}
+
