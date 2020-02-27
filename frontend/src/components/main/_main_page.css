@@ -31,14 +31,20 @@ input, h1, p, div {
 }
 
 .photo-container{
-  display: flex;
-  justify-content: center;
-  padding-top: 30px;
+  /* display: flex;
+  justify-content: center; */
+  /* padding-top: 30px; */
+  overflow: hidden;
+  
 }
 
 .splash-photo{
   /* border-radius: 15px; */
-  height: 100%;
-  width: 100%;
+  /* height: calc( 100vh - 90px);
+  width: auto; */
+  /* height: 100%;
+  width: 100%; */
+  margin-top: -300px;
+  clip: rect(0px, 500px, 1000px, 0px);
 }
 

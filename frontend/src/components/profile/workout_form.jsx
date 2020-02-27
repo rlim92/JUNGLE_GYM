@@ -1,5 +1,6 @@
 import React from "react";
 import NavBarContainer from "../nav/navbar_container";
+import workoutCSS from "./_workout.css"
 // import { fetchExercises }  from "../../actions/exercises_action";
 
 
@@ -35,14 +36,29 @@ class Workout extends React.Component {
 
   render(){
     return (
-      <div>
-        <p>You're logged in!</p>
-        <NavBarContainer />
         <div className="workoutContainer">
+          <div className="navContainer">
+            <NavBarContainer />
+          </div>
           <div className="workoutFormWrapper">
             <form className="workoutForm" onSubmit={this.handleSubmit}>
               <div className="categoryDropdown">
-                <label>
+              <div className="intensitySlider">
+                <div className="sliderInput">
+                  <label>
+                    Choose intensity
+                    <input
+                      type="range"
+                      min="1"
+                      max="3"
+                      value={this.state.intensity}
+                      className="slider"
+                      id="myRange"
+                      onChange={this.update("intensity")}
+                    />
+                  </label>
+                </div>
+                <label className="Dropdown">
                   Choose a category
                   <select onChange={this.update("category")} className="workoutList">
                     <option value="Core" >
@@ -66,21 +82,6 @@ class Workout extends React.Component {
                   </select>
                 </label>
               </div>
-              <div className="intensitySlider">
-                <div className="sliderInput">
-                  <label>
-                    Choose intensity
-                    <input
-                      type="range"
-                      min="1"
-                      max="3"
-                      value={this.state.intensity}
-                      className="slider"
-                      id="myRange"
-                      onChange={this.update("intensity")}
-                    />
-                  </label>
-                </div>
               </div>
               <button className="workoutFormButton">
                 Submit
@@ -88,7 +89,6 @@ class Workout extends React.Component {
             </form>
           </div>
         </div>
-      </div>
     );
   }
 }
