@@ -17,6 +17,7 @@ class Map extends Component {
             gotMaps: false
         }
         this.createRoute = this.createRoute.bind(this);
+        this.currentUserMark = null;
     }
     static defaultProps = {
         center: {
@@ -45,7 +46,8 @@ class Map extends Component {
         }
 
         this.directionsDisplay = new this.maps.DirectionsRenderer({
-            preserveViewport: true
+            preserveViewport: true,
+            suppressMarkers: true
         });
         this.directionsService = new this.maps.DirectionsService();
         const directionsParam = {
@@ -94,9 +96,17 @@ class Map extends Component {
             navigator.geolocation.getCurrentPosition(position => {
                 const userPos = { lat: position.coords.latitude, lng: position.coords.longitude };
                 this.map.panTo(userPos)
-                this.map.setZoom(10);
+                this.map.setZoom(14);
                 this.setState({ userPos })
                 window.state = this.state;
+                if(this.currentUserMark===null){
+                    new this.maps.Marker({
+                        position: userPos,
+                        map: this.map,
+                        title: "Origin",
+                        label: "U"
+                    })
+                }
             }, err => console.log(err), { timeout: 500 })
         }
         return (
