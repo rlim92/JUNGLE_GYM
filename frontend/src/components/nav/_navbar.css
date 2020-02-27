@@ -20,7 +20,7 @@
   cursor: pointer;
   height: 40px;
   min-width: 100px;
-  background-color:darkslategray;
+  background-color:#6d947b;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -33,7 +33,7 @@
 }
 
 .splash-links:hover{
-  background-color: black;
+  background-color: darkslategray;
 }
 
 .navBar-title{
