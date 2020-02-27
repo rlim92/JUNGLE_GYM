@@ -1,6 +1,5 @@
 import { connect } from "react-redux";
 import WorkoutRoutine from "./workout_routine";
-import { fetchExercises } from '../../actions/exercises_action';
 
 const mSTP = (state) => {
     return {
