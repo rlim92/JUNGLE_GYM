@@ -42,8 +42,11 @@ app.use("/api/locations", location);
 
 // Used to seed the database from the seed file
 // Comment in, Run, then Comment out to seed database
-// const seed = require("./seed");
-// seed();
+app.get("/seed", (req, res)=>{
+  const seed = require("./seed");
+  seed();
+  res.send("Seeded database with exercises")
+})
 
 const port = process.env.PORT || 5000;
 
