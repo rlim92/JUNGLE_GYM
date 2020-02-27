@@ -46,7 +46,7 @@ class Workout extends React.Component {
               <div className="intensitySlider">
                 <div className="sliderInput">
                   <label>
-                    Choose intensity
+                    Intensity: {this.state.intensity}
                     <input
                       type="range"
                       min="1"
