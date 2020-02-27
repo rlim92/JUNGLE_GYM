@@ -18,7 +18,7 @@ class NavBar extends React.Component {
 			return (
 				<div className="loggedInNavLinks">
 					<Link className="splash-links" to={'/home'}>Home</Link>
-					<button onClick={this.logoutUser}>Logout</button>
+					<a className="splash-links" onClick={this.logoutUser}>Logout</a>
 				</div>
 			);
 		} else {
