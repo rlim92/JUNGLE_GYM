@@ -7,7 +7,7 @@ import { clearErrors } from '../../actions/error_action';
 const mapStateToProps = (state) => {
   return {
     errors: Object.values(state.errors.session),
-    formType: "login",
+    formType: "Login",
     session: {
       email: "",
       password: ""

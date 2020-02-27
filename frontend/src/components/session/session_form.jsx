@@ -60,11 +60,11 @@ class SessionForm extends React.Component {
 		let usernameInput = "";
 		let password2 = "";
 		let prompt = (<span className="form-prompt">
-			Enter <strong>email</strong> and <strong>password</strong>.
+			Enter <strong>email</strong> and <strong className="pass">password</strong>.
         </span>)
 		if (this.props.formType === 'signup') {
 			prompt = (<span className="form-prompt">
-				Enter <strong>email</strong>, <strong>username</strong>, <strong>password</strong>, <strong>confirm password</strong>
+				Enter <strong>email</strong>, <strong>username</strong>, <strong className="pass">password</strong>, <strong>confirm password</strong>
             </span>)
 			usernameInput = (
 				<input
@@ -115,29 +115,33 @@ class SessionForm extends React.Component {
       <div className="outer-session-div">
         <div className="session-form-container">
           <form className="session-form" onSubmit={this.handleSubmit}>
-            <h3 className="input-title">{this.props.formType}</h3>
-            <div className="prompt-holder">{prompt}</div>
-            <div className="inputWrapper">
-              <input
-                className="input email"
-                type="text"
-                value={this.state.email}
-                placeholder="you@junglegym.com"
-                onChange={this.update("email")}
-              />
-              {usernameInput}
-              <input
-                className="input password"
-                type="password"
-                value={this.state.password}
-                placeholder="password"
-                onChange={this.update("password")}
-              />
-							{password2}
-            </div>
-            {errors}
-            <button className="session-button">{this.props.formType}</button>
-						{this.props.formType === 'login' ? demoButton : ""}
+						<div className="titleWrapper">
+							<h3 className="input-title">{this.props.formType}</h3>
+							<div className="prompt-holder">{prompt}</div>
+						</div>
+						<div className="bodyContainer">
+							<div className="inputWrapper">
+								<input
+									className="input email"
+									type="text"
+									value={this.state.email}
+									placeholder="you@junglegym.com"
+									onChange={this.update("email")}
+								/>
+								{usernameInput}
+								<input
+									className="input password"
+									type="password"
+									value={this.state.password}
+									placeholder="password"
+									onChange={this.update("password")}
+								/>
+								{password2}
+							</div>
+							{errors}
+							<button className="session-button">{this.props.formType}</button>
+							{this.props.formType === 'Login' ? demoButton : ""}
+						</div>
           </form>
         </div>
       </div>
