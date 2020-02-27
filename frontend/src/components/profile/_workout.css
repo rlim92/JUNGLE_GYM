@@ -4,15 +4,21 @@
   background-color: #212121;
   height: calc( 100vh );
   width: 100vw;
+  background-image: url("https://images.pexels.com/photos/373984/pexels-photo-373984.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-size: cover;
+  
 }
 
 .workoutFormWrapper{
   display: flex;
-  margin: 0 auto;
+  margin-right: 180px;
+  margin-top: 80px;
   padding: 20px;
   height: 45%;
-  width: 60%;
-  background-color: #555;
+  background-color: #6d947b;
+  border-radius: 5px;
+  font-family: "Roboto", sans-serif;
+  color: white;
 }
 
 .workoutForm{
@@ -42,4 +48,11 @@
 .Dropdown{
   display: flex;
   align-items: center;
+}
+
+.bestDiv {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+  height: 100%;
 }

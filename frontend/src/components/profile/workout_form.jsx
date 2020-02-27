@@ -40,53 +40,56 @@ class Workout extends React.Component {
           <div className="navContainer">
             <NavBarContainer />
           </div>
-          <div className="workoutFormWrapper">
-            <form className="workoutForm" onSubmit={this.handleSubmit}>
-              <div className="categoryDropdown">
-              <div className="intensitySlider">
-                <div className="sliderInput">
-                  <label>
-                    Intensity: {this.state.intensity}
-                    <input
-                      type="range"
-                      min="1"
-                      max="3"
-                      value={this.state.intensity}
-                      className="slider"
-                      id="myRange"
-                      onChange={this.update("intensity")}
-                    />
+          <div className="bestDiv">
+            <div></div>
+            <div className="workoutFormWrapper">
+              <form className="workoutForm" onSubmit={this.handleSubmit}>
+                <div className="categoryDropdown">
+                <div className="intensitySlider">
+                  <div className="sliderInput">
+                    <label>
+                      Intensity: {this.state.intensity}
+                      <input
+                        type="range"
+                        min="1"
+                        max="3"
+                        value={this.state.intensity}
+                        className="slider"
+                        id="myRange"
+                        onChange={this.update("intensity")}
+                      />
+                    </label>
+                  </div>
+                  <label className="Dropdown">
+                    Choose a category
+                    <select onChange={this.update("category")} className="workoutList">
+                      <option value="Core" >
+                        Core
+                      </option>
+                      <option
+                        value="Upper Body"
+                        
+                      >
+                        Upper Body
+                      </option>
+                      <option
+                        value="Lower Body"
+                        
+                      >
+                        Lower Body
+                      </option>
+                      <option value="Cardio" >
+                        Cardio
+                      </option>
+                    </select>
                   </label>
                 </div>
-                <label className="Dropdown">
-                  Choose a category
-                  <select onChange={this.update("category")} className="workoutList">
-                    <option value="Core" >
-                      Core
-                    </option>
-                    <option
-                      value="Upper Body"
-                      
-                    >
-                      Upper Body
-                    </option>
-                    <option
-                      value="Lower Body"
-                      
-                    >
-                      Lower Body
-                    </option>
-                    <option value="Cardio" >
-                      Cardio
-                    </option>
-                  </select>
-                </label>
-              </div>
-              </div>
-              <button className="workoutFormButton">
-                Submit
-              </button>
-            </form>
+                </div>
+                <button className="workoutFormButton">
+                  Submit
+                </button>
+              </form>
+            </div>
           </div>
         </div>
     );
