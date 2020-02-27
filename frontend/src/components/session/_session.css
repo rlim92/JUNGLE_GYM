@@ -242,3 +242,14 @@ input {
 	color: lightslategray;
 } */
 
+.error {
+	border: 1px solid red;
+	background: #fce9ef;
+}
+
+.errors {
+	padding-top: 10px;
+	color: white;
+	font-family: "Roboto", sans-serif;
+	font-size: 14px;
+}
