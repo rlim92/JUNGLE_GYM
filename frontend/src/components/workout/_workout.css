@@ -1,0 +1,63 @@
+.workout-container{
+  display: flex;
+  background-color: #212121;
+  height: calc( 100vh - 100px);
+  width: 100vw;
+  color: black;
+  font-family: "Roboto", sans-serif;
+  justify-content: space-around;
+  padding-top: 20px;
+  background-image: url(https://images.pexels.com/photos/1466852/pexels-photo-1466852.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
+  background-size: cover;
+}
+
+.workout-list-container{
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  max-height: calc( 100vh - 300px);
+  overflow-y: scroll;
+  margin-top: 50px;
+}
+
+.map-container{
+  display: flex;
+  height: 100%;
+}
+
+.map-div{
+  display: flex;
+  height: 28vw;
+  width: 38vw;
+  padding-top: 50px;
+}
+
+.workout-title{
+  font-size: 28px;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+
+.workouts-ul{
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  list-style-type: none;
+}
+
+.exercise-name{
+  text-decoration: underline;
+  font-family: "Roboto", sans-serif;
+  font-size: 25px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.exercise-description{
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+.exercise-value{
+  margin-top: 20px;
+  margin-left: 15px;
+  font-size: 20px;
+}
