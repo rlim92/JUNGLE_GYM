@@ -157,6 +157,10 @@ input {
 	font-family: "Roboto", sans-serif;
 }
 
+.session-button:hover {
+	background-color: #6d947b;
+}
+
 .form-demo {
 	cursor: pointer;
 	margin: 0 auto;

@@ -32,6 +32,26 @@
 .workoutFormButton{
   width: 70%;
   margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: darkslategray;
+  color: #fff;
+  height: 44px;
+  min-width: 130px;
+  min-height: 44px;
+  transition: background-color .17s ease,color .17s ease;
+  margin-top: 20px;
+  border-radius: 3px;
+  border: none;
+  font-weight: 500px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+.workoutFormButton:hover {
+  background-color: antiquewhite;
+  color: #6d947b;
 }
 
 .categoryDropdown{
@@ -55,4 +75,37 @@
   justify-content: space-between;
   width: 100vw;
   height: 100%;
+}
+
+.workoutList {
+  transition: border-color .2s ease-in-out;
+  font-family: 'Roboto', sans-serif;
+  text-rendering: optimizeLegibility;
+  font-weight: 400;
+  -webkit-writing-mode: horizontal-tb !important;
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  -webkit-appearance: textfield;
+  background-color: -internal-light-dark-color(white, black);
+  -webkit-rtl-ordering: logical;
+  cursor: pointer;
+  margin: 0em;
+  margin: 0 auto;
+  margin-top: 10px;
+  font: 400 11px system-ui;
+  padding: 10px;
+  border-width: 1px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
+  width: 95%;
+  border-radius: .3em;
+  font-size: 15px;
+  border: 1px solid gray;
 }
