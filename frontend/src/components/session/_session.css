@@ -172,6 +172,7 @@ input {
 	background-color: transparent;
 	border: none;
 	font-family: "Roboto", sans-serif;
+	text-shadow: 1px 1px #000;
 
 }
 
@@ -212,6 +213,7 @@ input {
 	font-size: 14px;
 	margin-top: 10px;
 	color: darkslategray;
+	text-shadow: 1px 1px #000;
 	/* font-weight: bold; */
 }
 
