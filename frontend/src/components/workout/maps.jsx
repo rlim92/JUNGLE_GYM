@@ -5,7 +5,6 @@ const mapsKey = require("../../mapkey").mapsKey;
 // const mapsKey = require("../../../config/keys").mapsKey;
 // import Marker from './marker';
 
-const Mark = ({ text }) => <div>{text}</div>;
 
 class Map extends Component {
     constructor(props) {
@@ -13,7 +12,9 @@ class Map extends Component {
         this.loadMarkers = this.loadMarkers.bind(this);
         this.bindMaps = this.bindMaps.bind(this);
         this.state={
-            count: 0
+            count: 0,
+            userPos: null,
+            gotMaps: false
         }
         this.createRoute = this.createRoute.bind(this);
     }
@@ -22,8 +23,10 @@ class Map extends Component {
             lat: 40.752067,
             lng: -73.981637
         },
-        zoom: 11
+        zoom: 2
     };
+
+
 
     componentDidMount() {
         this.props.fetchLocations();
@@ -32,6 +35,7 @@ class Map extends Component {
     bindMaps(map, maps) {
         this.map = map;
         this.maps = maps;
+        this.setState({gotMaps: true});
     }
 
     createRoute(e){
@@ -46,7 +50,7 @@ class Map extends Component {
         this.directionsService = new this.maps.DirectionsService();
         const directionsParam = {
             //TODO: origin should be where the user is
-            origin: { lat: 40.752067, lng: -73.981637 },
+            origin: { lat: this.state.userPos.lat, lng: this.state.userPos.lng },
             destination: { lat: e.latLng.lat(), lng: e.latLng.lng() },
             travelMode: "WALKING",
             unitSystem: this.maps.UnitSystem.IMPERIAL
@@ -54,8 +58,8 @@ class Map extends Component {
         this.directionsDisplay.setMap(this.map);
         this.directionsService.route(directionsParam, (result, status) => {
             this.directionsDisplay.setDirections(result);
-            console.log(result);
-            console.log(status);
+            // console.log(result);
+            // console.log(status);
         });
     }
 
@@ -70,12 +74,11 @@ class Map extends Component {
                     map,
                     title: loc.name
                     }).addListener("click", this.createRoute);
-                    map.addListener("click", e=>{
-                        console.log(`Lat: ${e.latLng.lat()}`)
-                        console.log(`Lng: ${e.latLng.lng()}`)
-                        // debugger
-                });
             }); // how to remove my team lead by force?
+            map.addListener("click", e => {
+                console.log(`Lat: ${e.latLng.lat()}`)
+                console.log(`Lng: ${e.latLng.lng()}`)
+            });
         }
     }
 
@@ -86,6 +89,16 @@ class Map extends Component {
 
 
     render() {
+
+        if (this.state.gotMaps) {
+            navigator.geolocation.getCurrentPosition(position => {
+                const userPos = { lat: position.coords.latitude, lng: position.coords.longitude };
+                this.map.panTo(userPos)
+                this.map.setZoom(10);
+                this.setState({ userPos })
+                window.state = this.state;
+            }, err => console.log(err), { timeout: 500 })
+        }
         return (
             // Important! Always set the container height explicitly
             <div style={{ height: "500px", width: "500px" }}>
