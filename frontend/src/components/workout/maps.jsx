@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-// import MarkerManager from "../../util/marker_manager";
 const mapsKey = require("../../mapkey").mapsKey;
 // const mapsKey = require("../../../config/keys").mapsKey;
 // import Marker from './marker';
@@ -24,7 +23,7 @@ class Map extends Component {
             lat: 40.752067,
             lng: -73.981637
         },
-        zoom: 2
+        zoom: 14
     };
 
 
@@ -104,10 +103,14 @@ class Map extends Component {
                         position: userPos,
                         map: this.map,
                         title: "Origin",
-                        label: "U"
+                        // label: "You"
+                        icon: {
+                            path: this.maps.SymbolPath.BACKWARD_OPEN_ARROW,
+                            scale: 6
+                        }
                     })
                 }
-            }, err => console.log(err), { timeout: 500 })
+            }, err => console.log(err), { timeout: 10000 })
         }
         return (
             // Important! Always set the container height explicitly
