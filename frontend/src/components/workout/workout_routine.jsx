@@ -20,17 +20,17 @@ class WorkoutRoutine extends React.Component {
                     value = exer.seconds;
                 }
                 return (<li>
-                    <h6>{exer.name}</h6>
-                    <p>{exer.description}</p>
-                    <p>{`${value} ${repsOrSecs} `}</p>
+                    <h6 className="exercise-name">{exer.name}</h6>
+                    <p className="exercise-description">{exer.description}</p>
+                    <p className="exercise-value">{`${value} ${repsOrSecs} `}</p>
                 </li>)
             })
         }
 
         return (
-            <div className="workout-container">
-               <h3>Workout</h3> 
-               <ul>
+            <div className="workout-list-container">
+               <h3 className="workout-title">Workout</h3> 
+               <ul className="workouts-ul">
                    {workout}
                </ul>
             </div>
