@@ -56,6 +56,12 @@ const exercises = [
         reps: null,
         seconds: 45
     }, {
+        name: "Bicylce Crunch",
+        categories: "Core",
+        description: "Lie faceup with your legs up, knees bent 90 degrees and stacked over your hips. Place your hands behind your head, elbows bent and pointing out to the sides. Use your abs to curl your shoulders off the floor. Twist to bring your right elbow to the left knee while straightening your right leg. Then twist to bring your left elbow to your right knee while straightening your left leg.",
+        reps: null,
+        seconds: 45
+    }, {
         name: "Burpee",
         categories: "Core",
         description: "Start in a low squat position with your hands on the floor. Next, kick your feet back to a push-up position. Complete one push- up, then immediately return your feet to the squat position. Leap up as high as possible before squatting and moving back into the push - up portion of the show.",
@@ -109,6 +115,12 @@ const exercises = [
         description: "Start in a low squat position with your hands on the floor. Next, kick your feet back to a push-up position. Complete one push- up, then immediately return your feet to the squat position. Leap up as high as possible before squatting and moving back into the push - up portion of the show.",
         reps: 5,
         seconds: null
+    }, {
+        name: "Run",
+        categories: "Cardio",
+        description: "Make sure you are alternating your arm swing while running. Make sure you are choosing a speed in which you can maintain for the set amount of time. ",
+        reps: null,
+        seconds: 180
     }]
 
 module.exports = () => {
