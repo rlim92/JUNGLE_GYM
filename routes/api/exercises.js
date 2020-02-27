@@ -2,9 +2,9 @@ const express = require("express");
 const router = express.Router();
 const Exercise = require("../../models/Exercise");
 
-router.get("/", (req, res)=>{
+router.post("/", (req, res)=>{
     const limit = 3;
-    const query = (req.body.category !== "All") ? {category: req.body.category} : {};
+    const query = (req.body.category) ? {category: req.body.category} : {};
     Exercise.find(query).then(exercises => {
         const lenExe = exercises.length;
         if(lenExe <= limit){
