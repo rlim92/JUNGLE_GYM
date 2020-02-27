@@ -1,6 +1,6 @@
 import {
     RECEIVE_SOME_EXERCISES
-} from "../actions/exercises_actions";
+} from "../actions/exercises_action";
 
 export default function (state = {}, action) {
     switch (action.type) {

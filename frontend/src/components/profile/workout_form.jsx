@@ -9,7 +9,7 @@ class Workout extends React.Component {
     const intensity = "1"
     this.state = { 
       intensity,
-      category: ""
+      category: "Core"
     }
 
     this.update = this.update.bind(this);
