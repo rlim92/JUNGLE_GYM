@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
-// import MarkerManager from "../../util/marker_manager";
 const mapsKey = require("../../mapkey").mapsKey;
 // const mapsKey = require("../../../config/keys").mapsKey;
 // import Marker from './marker';
@@ -17,13 +16,14 @@ class Map extends Component {
             gotMaps: false
         }
         this.createRoute = this.createRoute.bind(this);
+        this.currentUserMark = null;
     }
     static defaultProps = {
         center: {
             lat: 40.752067,
             lng: -73.981637
         },
-        zoom: 2
+        zoom: 14
     };
 
 
@@ -45,7 +45,8 @@ class Map extends Component {
         }
 
         this.directionsDisplay = new this.maps.DirectionsRenderer({
-            preserveViewport: true
+            preserveViewport: true,
+            suppressMarkers: true
         });
         this.directionsService = new this.maps.DirectionsService();
         const directionsParam = {
@@ -94,10 +95,22 @@ class Map extends Component {
             navigator.geolocation.getCurrentPosition(position => {
                 const userPos = { lat: position.coords.latitude, lng: position.coords.longitude };
                 this.map.panTo(userPos)
-                this.map.setZoom(10);
+                this.map.setZoom(14);
                 this.setState({ userPos })
                 window.state = this.state;
-            }, err => console.log(err), { timeout: 500 })
+                if(this.currentUserMark===null){
+                    new this.maps.Marker({
+                        position: userPos,
+                        map: this.map,
+                        title: "Origin",
+                        // label: "You"
+                        icon: {
+                            path: this.maps.SymbolPath.BACKWARD_OPEN_ARROW,
+                            scale: 6
+                        }
+                    })
+                }
+            }, err => console.log(err), { timeout: 10000 })
         }
         return (
             // Important! Always set the container height explicitly
