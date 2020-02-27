@@ -139,11 +139,11 @@ class SessionForm extends React.Component {
 								{password2}
 							</div>
 							{errors}
-							<div className="linkContainer">
 								<button className="session-button">{this.props.formType}</button>
+							<div className="linkContainer">
 								{this.props.formType === 'Login' ? demoButton : ""}
 								<div className="reRoute">
-									<p>{this.props.sessionText} <span>{this.props.navLink}</span> </p>
+									<span>{this.props.navLink}</span> 
 								</div>
 							</div>
 						</div>

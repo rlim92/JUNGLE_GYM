@@ -28,6 +28,7 @@ form {
 	justify-content: center;
 	background-size: cover;
 	background-color: gray;
+	background-image: url("https://images.pexels.com/photos/878151/pexels-photo-878151.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260")
 	
 }
 
@@ -62,7 +63,6 @@ form {
 	padding: 40px;
 	font-size: 18px;
 	color: #72767d;
-	background: #36393f;
 	-webkit-box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
 	box-shadow: 0 2px 10px 0 rgba(0,0,0,.2);
 	border-radius: 5px;
@@ -206,7 +206,9 @@ input {
 	flex-direction: row;
 	font-family: "Roboto", sans-serif;
 	font-size: 14px;
-	margin-top: 5px;
+	margin-top: 10px;
+	color: darkslategray;
+	/* font-weight: bold; */
 }
 
 .reRoute span > a {
@@ -215,11 +217,19 @@ input {
 	
 }
 
-.linkContainer {
-	display: flex;
-	flex-direction: column;
+.reRoute span > a:hover {
+	text-decoration: underline;
 }
 
+.linkContainer {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.prompt-holder {
+	margin-top: -20px;
+}
 /* .pass {
 	color: lightslategray;
 } */
