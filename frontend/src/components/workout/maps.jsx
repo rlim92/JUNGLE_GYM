@@ -16,7 +16,8 @@ class Map extends Component {
                 lat: 40.73636473997069,
                 lng: -73.99395929250146
             },
-            gotMaps: false
+            gotMaps: false,
+            placedMarkers: false
         }
         this.createRoute = this.createRoute.bind(this);
         this.currentUserMark = null;
@@ -77,7 +78,7 @@ class Map extends Component {
     }
 
     loadMarkers(map, maps) {
-        if (this.props.locations.length) {
+        if (this.props.locations.length > 0 && this.state.placedMarkers === false) {
             this.props.locations.map(loc => {
                 new maps.Marker({
                     position: {
@@ -89,9 +90,10 @@ class Map extends Component {
                     }).addListener("click", this.createRoute);
             }); // how to remove my team lead by force?
             map.addListener("click", e => {
-                console.log(`Lat: ${e.latLng.lat()}`)
-                console.log(`Lng: ${e.latLng.lng()}`)
+                // console.log(`Lat: ${e.latLng.lat()}`)
+                // console.log(`Lng: ${e.latLng.lng()}`)
             });
+            this.setState({placedMarkers: true});
         }
     }
 
@@ -123,7 +125,9 @@ class Map extends Component {
                         scale: 6
                     }
                 })
-            }, err => console.log(err), { timeout: 10000 })
+            }, err => {
+                // console.log(err)
+            }, { timeout: 10000 })
         }
         return (
             // Important! Always set the container height explicitly
