@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import WorkoutRoutine from "./workout_routine";
-import { fetchExercises } from '../../actions/exercises_actions';
+import { fetchExercises } from '../../actions/exercises_action';
 
 const mSTP = (state) => {
     return {
@@ -14,4 +14,4 @@ const mDTP = dispatch => {
     };
 };
 
-export default connect(mSTP, mDTP)(Workout);
+export default connect(mSTP, mDTP)(WorkoutRoutine);

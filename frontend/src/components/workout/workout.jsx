@@ -1,5 +1,5 @@
 import React from "react";
-import WorkoutRoutine from "./workout_routine";
+import WorkoutRoutine from "./workout_routine_container";
 import Map from "./maps";
 
 class Workout extends React.Component {
