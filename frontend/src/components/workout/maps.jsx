@@ -13,8 +13,8 @@ class Map extends Component {
         this.state={
             count: 0,
             userPos: {
-                lat: 40.752067,
-                lng: -73.981637
+                lat: 40.73636473997069,
+                lng: -73.99395929250146
             },
             gotMaps: false
         }
@@ -23,8 +23,8 @@ class Map extends Component {
     }
     static defaultProps = {
         center: {
-            lat: 40.752067,
-            lng: -73.981637
+            lat: 40.73636473997069,
+            lng: -73.99395929250146
         },
         zoom: 14
     };
@@ -110,6 +110,7 @@ class Map extends Component {
                 this.map.setZoom(14);
                 this.setState({ userPos })
                 window.state = this.state;
+                debugger
                 if(this.currentUserMark){
                     this.currentUserMark.setMap(null);
                 }

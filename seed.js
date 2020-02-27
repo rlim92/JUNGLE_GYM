@@ -85,7 +85,31 @@ const exercises = [
         description: "Stand with feet parallel or turned out 15 degrees — whatever is most comfortable. Slowly start to crouch by bending hips and knees until thighs are at least parallel to the floor. Make sure your heels do not rise off the floor.Press through your heels to return to a standing position.",
         reps: 10,
         seconds: null
-    },]
+    },{
+        name: "Knees To Elbows Hang",
+        categories: "Cardio",
+        description: "Grab the bar at shoulder length width and fully extend your arms. Keep your core stable and do your best to not swing around. Slowly bring your knees to your elbows then slowly go back to the starting position",
+        reps: 8,
+        seconds: null
+    }, {
+        name: "Jumping Jacks",
+        categories: "Cardio",
+        description: "Stand upright with your legs together, arm at your sides. Bend your knees slightly and jump into the air. As you jump, spread your legs to be about shoulder-width apart. Stretch your arms out and over your head. Jump back to the starting position",
+        reps: null,
+        seconds: 45
+    }, {
+        name: "Jumping Jacks",
+        categories: "Cardio",
+        description: "Stand upright with your legs together, arm at your sides. Bend your knees slightly and jump into the air. As you jump, spread your legs to be about shoulder-width apart. Stretch your arms out and over your head. Jump back to the starting position",
+        reps: null,
+        seconds: 45
+    }, {
+        name: "Burpee",
+        categories: "Cardio",
+        description: "Start in a low squat position with your hands on the floor. Next, kick your feet back to a push-up position. Complete one push- up, then immediately return your feet to the squat position. Leap up as high as possible before squatting and moving back into the push - up portion of the show.",
+        reps: 5,
+        seconds: null
+    }]
 
 module.exports = () => {
     // Exercise.findByIdAndRemove({});
