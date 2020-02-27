@@ -39,6 +39,12 @@ app.use("/api/locations", location);
 // app.use("/", (req, res) =>
 //   res.sendFile("frontend/public/index.html", { root: __dirname })
 // );
+
+// Used to seed the database from the seed file
+// Comment in, Run, then Comment out to seed database
+// const seed = require("./seed");
+// seed();
+
 const port = process.env.PORT || 5000;
 
 app.listen(port, () => console.log(`Server is running on port ${port}`))
