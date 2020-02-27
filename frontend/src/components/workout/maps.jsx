@@ -109,8 +109,7 @@ class Map extends Component {
                 this.map.panTo(userPos)
                 this.map.setZoom(14);
                 this.setState({ userPos })
-                window.state = this.state;
-                debugger
+
                 if(this.currentUserMark){
                     this.currentUserMark.setMap(null);
                 }

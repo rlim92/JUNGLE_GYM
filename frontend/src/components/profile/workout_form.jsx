@@ -35,6 +35,21 @@ class Workout extends React.Component {
   }
 
   render(){
+    let intensityLevel = "";
+    switch(this.state.intensity){
+      case "1":
+        intensityLevel = "Beginner";
+        break;
+      case "2":
+        intensityLevel = "Intermediate";
+        break;
+      case "3":
+        intensityLevel = "Master";
+        break;
+      default:
+        intensityLevel = "Broken";
+        break;
+    }
     return (
         <div className="workoutContainer">
           <div className="navContainer">
@@ -48,7 +63,8 @@ class Workout extends React.Component {
                 <div className="intensitySlider">
                   <div className="sliderInput">
                     <label>
-                      Intensity: {this.state.intensity}
+                      Intensity: {intensityLevel}
+                      <br />
                       <input
                         type="range"
                         min="1"
@@ -57,6 +73,7 @@ class Workout extends React.Component {
                         className="slider"
                         id="myRange"
                         onChange={this.update("intensity")}
+                        style={{width: "90%"}}
                       />
                     </label>
                   </div>
