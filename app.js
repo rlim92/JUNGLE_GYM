@@ -2,12 +2,15 @@ const path = require('path');
 const express = require('express');
 const app = express();
 const mongoose = require("mongoose");
+const bodyParser = require('body-parser');
+const passport = require('passport');
+
 const db = require("./config/keys").mongoURI;
 const users = require("./routes/api/users");
 const exercises = require("./routes/api/exercises");
 const location = require("./routes/api/location");
-const bodyParser = require('body-parser');
-const passport = require('passport');
+const workout = require("./routes/api/workout")
+
 app.use(passport.initialize());
 require('./config/passport')(passport);
 
@@ -31,6 +34,7 @@ mongoose
 app.use("/api/users", users);
 app.use("/api/exercises", exercises);
 app.use("/api/locations", location);
+// app.use("/api/workouts", workout);
 // app.get("/", (req, res) => res.send("Welcome to Jungle Gym!"));
 // app.use("/", (req, res) =>
 //   res.sendFile("frontend/public/index.html", { root: __dirname })

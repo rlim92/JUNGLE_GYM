@@ -28,8 +28,8 @@ router.get("/", (req,res)=>{
     Exercise.find({}).then(all => res.json(all));
 })
 
-router.get("/:id", (req, res)=>{
-    Exercise.findOne({_id: req.params.id}).then(exercise => res.json(exercise));
+router.get("/:name", (req, res)=>{
+    Exercise.findOne({name: req.params.name}).then(exercise => res.json(exercise));
 })
 
 
