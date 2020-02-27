@@ -117,7 +117,7 @@ class SessionForm extends React.Component {
           <form className="session-form" onSubmit={this.handleSubmit}>
 						<div className="titleWrapper">
 							<h3 className="input-title">{this.props.formType}</h3>
-							<div className="prompt-holder">{prompt}</div>
+							{/* <div className="prompt-holder">{prompt}</div> */}
 						</div>
 						<div className="bodyContainer">
 							<div className="inputWrapper">
