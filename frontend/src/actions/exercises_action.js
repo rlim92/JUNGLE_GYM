@@ -7,7 +7,7 @@ const receiveExercises = (exercises) => ({
     exercises
 });
 
-export const fetchExercises = () => dispatch => {
-    return ApiUtil.fetchExercises()
+export const fetchExercises = (formData) => dispatch => {
+    return ApiUtil.fetchExercises(formData)
         .then(exercises => { return dispatch(receiveExercises(exercises)) })
 };
