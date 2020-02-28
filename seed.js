@@ -26,6 +26,18 @@ const exercises = [
         reps: 5,
         seconds: null
     }, {
+        name: "Dips",
+        categories: "Upper Body",
+        description: "Find a bench or surface you can grip (around knee level). Sit on the bench, place your hands on the edge of the surface and move yoour hip forward. Fold your arms and knees and bring your body down until your back touches the surface. Don't lean too forward. Then move your body up again. You can position your legs a bit forward to make the exercise a bit harder.",
+        reps: 5,
+        seconds: null
+    }, {
+       name: "Feet Elevated Pushup",
+       categories: "Upper Body",
+       description: "Put your feet on an elevated surface such as a bench. Place your hands below your shoulders. Do a tradional push up while keeping your feet on the elevated surface. Return to your start position and repeat.",
+       reps: 8,
+       seconds: null
+    }, {
         name: "Bar Hang",
         categories: "Core",
         description: "Grab the bar at shoulder length width and fully extend your arms. Keep your core stable and do your best to not swing around",
@@ -68,6 +80,18 @@ const exercises = [
         reps: 5,
         seconds: null
     }, {
+        name: "Hanging Knee Tucks",
+        categories: "Core",
+        description: "Hang from a pull up bar or somewhere to hang from and tuck your knees into your chests.",
+        reps: null,
+        seconds: 20
+    }, {
+        name:"Russian Twist",
+        categories: "Core",
+        description: "First, sit with your feet straight on the floor. Then bend your knees and make a ninety-degree angle. Then lift your legs up, hold the palm of your one hand with the other and twist your body left and right. Try not to move your head too much",
+        reps: 10,
+        seconds: null
+    }, {
         name: "Jumping Knee Tuck",
         categories: "Lower Body",
         description: "Jump in place using your arms to stablize yoruself. Make sure your knees are brought as high as possible. The best is if your knees touch your elbows.",
@@ -91,7 +115,19 @@ const exercises = [
         description: "Stand with feet parallel or turned out 15 degrees — whatever is most comfortable. Slowly start to crouch by bending hips and knees until thighs are at least parallel to the floor. Make sure your heels do not rise off the floor.Press through your heels to return to a standing position.",
         reps: 10,
         seconds: null
-    },{
+    }, {
+       name: "Step Up to Chair",
+       categories: "Lower Body",
+       description: "Find a bench or a surface similar to the level of a bench. Put your hands on your waist, and step up onto the surface. Step back down and alternate your legs.",
+       reps: 10,
+       seconds: null
+    }, {
+         name: "Donkey Kick",
+         categories: "Lower Body",
+         description: "Get on all fours on the ground as a donkey would. Now choose which leg does the kicking first. To kick, just lift that leg up, maintaining the 90-degree angle between your thigh and eg. Put the leg down to the starting position. Repeat until done with reps",
+         reps: 8,
+         seconds: null,
+    }, {
         name: "Knees To Elbows Hang",
         categories: "Cardio",
         description: "Grab the bar at shoulder length width and fully extend your arms. Keep your core stable and do your best to not swing around. Slowly bring your knees to your elbows then slowly go back to the starting position",
@@ -104,11 +140,11 @@ const exercises = [
         reps: null,
         seconds: 45
     }, {
-        name: "Jumping Jacks",
+        name: "Jump Rope",
         categories: "Cardio",
-        description: "Stand upright with your legs together, arm at your sides. Bend your knees slightly and jump into the air. As you jump, spread your legs to be about shoulder-width apart. Stretch your arms out and over your head. Jump back to the starting position",
-        reps: null,
-        seconds: 45
+        description: "Bring a jump rope with you. To jump rope, hold the rope on both hands and have the rope hang at your heels. Throw the rope towards the front in a circular arc and jump with both feet before the rope reaches your legs",
+        reps: 10,
+        seconds: null
     }, {
         name: "Burpee",
         categories: "Cardio",
@@ -136,4 +172,5 @@ module.exports = () => {
         })
         newExercise.save()
     }
+    return exercises.length;
 }
