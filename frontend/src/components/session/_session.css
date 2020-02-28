@@ -120,7 +120,6 @@ input {
 	text-shadow: none;
 	display: inline-block;
 	text-align: start;
-	-webkit-appearance: textfield;
 	background-color: -internal-light-dark-color(white, black);
 	-webkit-rtl-ordering: logical;
 	cursor: text;
