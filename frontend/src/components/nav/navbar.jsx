@@ -35,7 +35,8 @@ class NavBar extends React.Component {
 		return (
 			<div className="navBar">
 				<div className="navBar-right">
-					<h1 className="navBar-title" >JungleGym</h1>
+					<h1><Link className="navBar-title" to={'/home'}>JungleGym</Link></h1>
+					{/* <h1 className="navBar-title">JungleGym</h1> */}
 				</div>
 
 				<div className="navBar-mid">
