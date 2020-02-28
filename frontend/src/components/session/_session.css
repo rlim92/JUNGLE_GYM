@@ -111,6 +111,7 @@ input {
 	text-rendering: optimizeLegibility;
 	font-weight: 400;
 	-webkit-writing-mode: horizontal-tb !important;
+	-moz-appearance: scale-horizontal;
 	text-rendering: auto;
 	color: -internal-light-dark-color(black, white);
 	letter-spacing: normal;
