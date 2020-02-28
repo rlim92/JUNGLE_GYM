@@ -104,7 +104,9 @@ class Map extends Component {
 
 
     render() {
-
+        if (this.placedMarkers === false && this.props.locations.length > 0){
+            this.loadMarkers(this.map, this.maps);
+        }
         if (this.state.gotMaps) {
             navigator.geolocation.getCurrentPosition(position => {
                 const userPos = { lat: position.coords.latitude, lng: position.coords.longitude };

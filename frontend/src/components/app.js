@@ -11,11 +11,11 @@ import WorkoutFormContainer from "./profile/workout_form_container";
 const App = () => {
 	return (
 	<Switch>
-		<Route exact path="/" component={MainPage}/>
+		<AuthRoute exact path="/" component={MainPage}/>
 		<ProtectedRoute exact path="/workout" component={Workout}/>
 		<ProtectedRoute exact path="/home" component={WorkoutFormContainer}/>
 		<AuthRoute exact path="/login" component={LoginFormContainer}/>
-		<AuthRoute eact path="/signup" component={SignupFormContainer}/>
+		<AuthRoute exact path="/signup" component={SignupFormContainer}/>
 	</Switch>
 	)
 };
