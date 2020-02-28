@@ -25,6 +25,7 @@
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "react-redux": "^7.2.0",
+    "serve-favicon": "^2.5.0",
     "validator": "^12.2.0"
   },
   "devDependencies": {
