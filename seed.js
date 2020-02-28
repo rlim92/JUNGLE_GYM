@@ -56,7 +56,7 @@ const exercises = [
         reps: null,
         seconds: 45
     }, {
-        name: "Bicylce Crunch",
+        name: "Bicycle Crunch",
         categories: "Core",
         description: "Lie faceup with your legs up, knees bent 90 degrees and stacked over your hips. Place your hands behind your head, elbows bent and pointing out to the sides. Use your abs to curl your shoulders off the floor. Twist to bring your right elbow to the left knee while straightening your right leg. Then twist to bring your left elbow to your right knee while straightening your left leg.",
         reps: null,
