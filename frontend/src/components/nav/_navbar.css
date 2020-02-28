@@ -4,6 +4,7 @@
   justify-content: space-between;
   font-family: "Roboto", sans-serif;
   background-color: #212121;
+  z-index: 2;
 }
 
 .navBar-links{
@@ -39,6 +40,10 @@
 .navBar-title{
   color: antiquewhite;
   font-family: "Roboto", sans-serif;
+}
+
+.navBar-title:hover{
+  cursor: pointer;
 }
 
 
