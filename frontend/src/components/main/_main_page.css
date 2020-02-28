@@ -31,19 +31,32 @@ input, h1, p, div {
 }
 
 .photo-container{
-  /* display: flex;
-  justify-content: center; */
+  display: flex;
   /* padding-top: 30px; */
   overflow: hidden;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1553012547-284d8c582b1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-position: center;
+  align-items: center;
 }
 
-.splash-photo{
-  /* border-radius: 15px; */
-  /* height: calc( 100vh - 90px);
-  width: auto; */
+.left-div{
+  display: flex;
   height: auto;
-  width: 100%;
-  margin-top: -30vh;
-
+  width: 30%;
+  color: antiquewhite;
+  align-items: center;
+  padding: 40px;
+  font-family: "Roboto", sans-serif;
+  font-size: 30px;
+  text-shadow:1px 1px black;
+  margin-left: 40px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
 }
+
+
+
+
 

@@ -11,7 +11,8 @@ class MainPage extends React.Component {
 				</div>
 
 				<div className="photo-container">
-					<img className="splash-photo" src="https://images.unsplash.com/photo-1553012547-284d8c582b1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"/>
+					<div className="left-div">No gym? No problem! Get a great workout with JungleGym. We provide the location and workouts. You put in the work. </div>
+					<div className="right-div"></div>
 				</div>
 
 				<div className="footer-container">
