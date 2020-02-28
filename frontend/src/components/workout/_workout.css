@@ -61,3 +61,12 @@
   margin-left: 15px;
   font-size: 20px;
 }
+
+.map-text{
+  width: 50vw;
+  color: darkslategray;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Robot", sans-serif;
+  font-weight: bold;
+}

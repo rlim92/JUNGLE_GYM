@@ -134,19 +134,22 @@ class Map extends Component {
         return (
             // Important! Always set the container height explicitly
             <div className="map-div">
-                <GoogleMapReact
-                bootstrapURLKeys={{
-                    key: mapsKey
-                }}
-                defaultCenter={this.props.center}
-                defaultZoom={this.props.zoom}
-                yesIWantToUseGoogleMapApiInternals
-                onGoogleApiLoaded={({ map, maps }) => {
-                    this.bindMaps(map, maps);
-                    if (this.props.locations.length > 0) {
-                        this.loadMarkers(map, maps);
-                    }
-                }}/>
+                <div className="map-text">
+                    Click a marker to create a route to a park / gym
+                    <GoogleMapReact
+                        bootstrapURLKeys={{
+                            key: mapsKey
+                        }}
+                        defaultCenter={this.props.center}
+                        defaultZoom={this.props.zoom}
+                        yesIWantToUseGoogleMapApiInternals
+                        onGoogleApiLoaded={({ map, maps }) => {
+                            this.bindMaps(map, maps);
+                            if (this.props.locations.length > 0) {
+                                this.loadMarkers(map, maps);
+                            }
+                        }} />
+                </div>
             </div>
         );
     }f
