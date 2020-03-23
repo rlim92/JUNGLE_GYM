@@ -15,6 +15,7 @@ class Workout extends React.Component {
 
     this.update = this.update.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleSubmitTwo = this.handleSubmitTwo.bind(this);
   }
 
   update(field) {
@@ -32,6 +33,14 @@ class Workout extends React.Component {
         this.props.history.push('/workout')
       )
 
+  }
+
+  handleSubmitTwo(e) {
+    e.preventDefault();
+    this.props.fetchExercises(this.state)
+      .then(
+        this.props.history.push('/personal')
+      )
   }
 
   render(){
@@ -101,6 +110,13 @@ class Workout extends React.Component {
                     </select>
                   </label>
                 </div>
+                </div>
+                <div className="custom-workout">
+                  <span>or</span>
+                  <button onClick={this.handleSubmitTwo} 
+                          className="custom-workout-button">
+                          Custom Workout
+                  </button>
                 </div>
                 <button className="workoutFormButton">
                   Submit
