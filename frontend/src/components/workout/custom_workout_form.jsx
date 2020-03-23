@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import customWorkoutCSS from "./_custom_workout.css";
 
 class CustomWorkoutForm extends React.Component {
 	constructor(props) {
@@ -41,7 +42,7 @@ class CustomWorkoutForm extends React.Component {
 										value={this.state.category}
 										onChange={this.update("category")}
 									/>
-									<label for="upperBody">Upper Body</label>
+									<label for="upperBody" className="upperLabel">Upper Body</label>
 									<input
 										type="checkbox"
 										className="customCheckbox"
@@ -49,7 +50,7 @@ class CustomWorkoutForm extends React.Component {
 										value={this.state.category}
 										onChange={this.update("category")}
 									/>
-									<label for="lowerBody">Lower Body</label>
+									<label for="lowerBody" className="lowerLabel">Lower Body</label>
 									<input
 										type="checkbox"
 										className="customCheckbox"
@@ -57,23 +58,21 @@ class CustomWorkoutForm extends React.Component {
 										value={this.state.category}
 										onChange={this.update("category")}
 									/>
-									<label for="core">Core</label>
+									<label for="core" className="coreLabel">Core</label>
                 </div>
               </div>
             </div>
             <div className="exercises">
               <div className="exerciseCheckbox">
                 <div className="checkboxInput">
-                  <label>
-                    Exercises
                     <input
                       type="checkbox"
                       className="customCheckbox"
-                      id="myCheckbox"
+                      id="exercises"
                       value={this.props.exercises[0]}
                       onChange={this.update("exercises")}
                     />
-                  </label>
+									<label for="exercises">Exercises</label>
                 </div>
               </div>
             </div>
