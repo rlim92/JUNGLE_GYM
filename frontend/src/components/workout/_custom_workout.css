@@ -1,3 +1,13 @@
 .customWorkoutForm {
 	display: flex;
+	
+}
+
+.checkboxInput {
+	display: flex;
+	flex-direction: column;
+}
+
+.categoryWrapper {
+	display: flex;
 }

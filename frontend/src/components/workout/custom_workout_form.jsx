@@ -35,14 +35,16 @@ class CustomWorkoutForm extends React.Component {
               <h3 className="categoryTitle">Categories</h3>
               <div className="categoryCheckbox">
                 <div className="checkboxInput">
-									<input
-										type="checkbox"
-										className="customCheckbox"
-										id="upperBody"
-										value={this.state.category}
-										onChange={this.update("category")}
-									/>
-									<label for="upperBody" className="upperLabel">Upper Body</label>
+									<div className="categoryWrapper">
+										<input
+											type="checkbox"
+											className="customCheckbox"
+											id="upperBody"
+											value={this.state.category}
+											onChange={this.update("category")}
+										/>
+										<label for="upperBody" className="upperLabel">Upper Body</label>
+									</div>
 									<input
 										type="checkbox"
 										className="customCheckbox"
