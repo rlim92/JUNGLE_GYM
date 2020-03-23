@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const ExerciseSchema = new Schema({
     category:{
-        type: String,
+        type: Array,
         required: true
     },
     name: {

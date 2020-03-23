@@ -4,30 +4,38 @@ const Exercise = require("../../models/Exercise");
 
 router.post("/", (req, res)=>{
     const limit = 3;
-    const query = (req.body.category) ? {category: req.body.category} : {};
+    const categories = (req.body.categories) ? {categories: req.body.categories} : [];
     const intensity = (req.body.intensity) ? parseInt(req.body.intensity) : 1;
-    Exercise.find(query).then(exercises => {
+    Exercise.find({}).then(exercises => {
         const lenExe = exercises.length;
-        if(lenExe <= limit){
-            res.json(exercises)
-        } else {
-            let workoutNums = [];
-            let workoutObject = {};
-            while(workoutNums.length < limit){
-                let randomNum = Math.floor(Math.random()*lenExe);
-                while(workoutNums.includes(randomNum)){randomNum = Math.floor(Math.random()*lenExe)}
-                const rW = exercises[randomNum]; // random Workout
-                workoutObject[rW.name] = {
-                  name: rW.name,
-                  category: rW.category,
-                  description: rW.description,
-                  reps: (rW.reps) ? rW.reps * intensity : null,
-                  seconds: (rW.seconds) ? rW.seconds * intensity : null,
-                };
-                workoutNums.push(randomNum);
+        let workoutNums = [];
+        let workoutObject = {};
+        while(workoutNums.length < limit){
+            let randomNum = Math.floor(Math.random()*lenExe);
+            while(true){
+                while (workoutNums.includes(randomNum)) { randomNum = Math.floor(Math.random() * lenExe) }
+                if(categories.length === 0 || !(categories instanceof Array)){break;}
+                const found = false;
+                for(let i = 0; i < categories.length; i++){
+                    if(exercises[randomNum].categories.includes(categories[i])){
+                        found = true;
+                        break;
+                    }
+                }
+                if(found){break;}
             }
-            res.json(workoutObject)
+            const rW = exercises[randomNum]; // random Workout
+            workoutObject[rW.name] = {
+                name: rW.name,
+                categories: rW.category,
+                description: rW.description,
+                reps: (rW.reps) ? rW.reps * intensity : null,
+                seconds: (rW.seconds) ? rW.seconds * intensity : null,
+            };
+            workoutNums.push(randomNum);
         }
+        workoutObject["categories"] = categories;
+        res.json(workoutObject)
     })
 })
 
