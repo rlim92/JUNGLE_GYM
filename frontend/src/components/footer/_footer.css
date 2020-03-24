@@ -1,0 +1,58 @@
+
+.footer-container{
+  display: flex;
+  justify-content: space-around;
+  padding: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+.links{
+  display: flex;
+  flex-direction: row;
+}
+
+.label{
+  display: none;
+}
+
+.personal-site{
+  text-decoration: none;
+  color: antiquewhite;
+  margin-bottom: 1px;
+}
+
+.person-name{
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.personal-site:hover{
+  cursor: pointer;
+  color: #6d947b;
+}
+
+.link-border{
+  border-radius: 5px;
+  filter: invert(1);
+}
+
+.git-border{
+  border-radius: 100px;
+  filter: invert(1);
+  margin-left: 8px;
+}
+
+.angel-border{
+  border-radius: 5px;
+  filter: invert(1);
+  margin-left: 8px;
+}
+
+
+
+
+
+
+
+
+

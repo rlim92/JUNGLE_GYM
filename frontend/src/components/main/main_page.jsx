@@ -1,6 +1,7 @@
 import React from 'react';
 import NavBarContainer from '../nav/navbar_container';
 import mainPageCSS from './_main_page.css'
+import Footer from '../footer/footer';
 
 class MainPage extends React.Component {
 	render() {
@@ -15,10 +16,8 @@ class MainPage extends React.Component {
 					<div className="right-div"></div>
 				</div>
 
-				<div className="footer-container">
-
-				</div>
-
+					<Footer/>
+	
 			</div>
 		);
 	}
