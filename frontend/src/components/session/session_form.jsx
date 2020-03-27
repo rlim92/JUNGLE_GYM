@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../footer/footer'
 import SessionCSS from './_session.css';
 
 class SessionForm extends React.Component {
@@ -148,6 +149,10 @@ class SessionForm extends React.Component {
 						</div>
           </form>
         </div>
+
+				<div className="session-footer">
+					<Footer/>
+				</div>
       </div>
     );
 	};

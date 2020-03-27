@@ -30,15 +30,27 @@ input, h1, p, div {
   width: 100vw;
 }
 
-.photo-container{
+.merge-container{
   display: flex;
-  /* padding-top: 30px; */
+  padding-top: 30px;
   overflow: hidden;
   height: 100%;
   background-image: url("https://images.unsplash.com/photo-1553012547-284d8c582b1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
   background-size: cover;
   background-position: center;
-  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.photo-container{
+  display: flex;
+  padding-top: 30px;
+  /* overflow: hidden;
+  height: 100%;
+  background-image: url("https://images.unsplash.com/photo-1553012547-284d8c582b1f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+  background-size: cover;
+  background-position: center;
+  align-items: center; */
 }
 
 .left-div{

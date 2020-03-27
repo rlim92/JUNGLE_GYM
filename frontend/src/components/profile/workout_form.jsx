@@ -1,5 +1,6 @@
 import React from "react";
 import NavBarContainer from "../nav/navbar_container";
+import Footer from "../footer/footer";
 import workoutCSS from "./_workout.css"
 // import { fetchExercises }  from "../../actions/exercises_action";
 
@@ -108,6 +109,7 @@ class Workout extends React.Component {
               </form>
             </div>
           </div>
+          <Footer/>
         </div>
     );
   }

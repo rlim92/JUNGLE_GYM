@@ -10,13 +10,13 @@ class MainPage extends React.Component {
 				<div className="nav-bar-container">
 					<NavBarContainer/>
 				</div>
-
+				<div className="merge-container">
 				<div className="photo-container">
 					<div className="left-div">No gym? No problem! Get a great workout with JungleGym. We provide the location and workouts. You put in the work. </div>
 					<div className="right-div"></div>
 				</div>
-
 					<Footer/>
+				</div>
 	
 			</div>
 		);

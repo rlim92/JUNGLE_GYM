@@ -4,6 +4,8 @@
   justify-content: space-around;
   padding: 15px;
   font-family: "Roboto", sans-serif;
+  background-color: black;
+  opacity: .7;
 }
 
 .links{
@@ -36,16 +38,28 @@
   filter: invert(1);
 }
 
+.link-border:hover{
+  filter: contrast(.25);
+}
+
 .git-border{
   border-radius: 100px;
   filter: invert(1);
   margin-left: 8px;
 }
 
+.git-border:hover{
+  filter: contrast(.25);
+}
+
 .angel-border{
   border-radius: 5px;
   filter: invert(1);
   margin-left: 8px;
+}
+
+.angel-border:hover{
+  filter: contrast(.25);
 }
 
 
