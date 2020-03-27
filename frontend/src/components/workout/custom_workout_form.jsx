@@ -32,7 +32,7 @@ class CustomWorkoutForm extends React.Component {
         <div className="formWrapper">
           <form onSubmit={this.handleSubmit}>
             <div className="categories">
-              <h3 className="categoryTitle">Categories</h3>
+              <h3 className="categoryTitle">Exercises</h3>
               <div className="categoryCheckbox">
                 <div className="checkboxInput">
 									<div className="categoryWrapper">
