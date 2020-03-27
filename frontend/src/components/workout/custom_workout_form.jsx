@@ -43,7 +43,7 @@ class CustomWorkoutForm extends React.Component {
 											value={this.state.category}
 											onChange={this.update("category")}
 										/>
-										<label for="upperBody" className="upperLabel">Upper Body</label>
+										<label htmlfor="upperBody" className="upperLabel">Upper Body</label>
 									</div>
 									<input
 										type="checkbox"
@@ -52,7 +52,7 @@ class CustomWorkoutForm extends React.Component {
 										value={this.state.category}
 										onChange={this.update("category")}
 									/>
-									<label for="lowerBody" className="lowerLabel">Lower Body</label>
+									<label htmlfor="lowerBody" className="lowerLabel">Lower Body</label>
 									<input
 										type="checkbox"
 										className="customCheckbox"
@@ -60,7 +60,7 @@ class CustomWorkoutForm extends React.Component {
 										value={this.state.category}
 										onChange={this.update("category")}
 									/>
-									<label for="core" className="coreLabel">Core</label>
+									<label htmlfor="core" className="coreLabel">Core</label>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@ class CustomWorkoutForm extends React.Component {
                       value={this.props.exercises[0]}
                       onChange={this.update("exercises")}
                     />
-									<label for="exercises">Exercises</label>
+									<label htmlfor="exercises">Exercises</label>
                 </div>
               </div>
             </div>
