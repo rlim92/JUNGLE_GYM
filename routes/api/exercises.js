@@ -4,7 +4,7 @@ const Exercise = require("../../models/Exercise");
 
 router.post("/", (req, res)=>{
     const limit = 3;
-    const categories = (req.body.categories) ? {categories: req.body.categories} : [];
+    const categories = (req.body.categories) ? req.body.categories : "";
     const intensity = (req.body.intensity) ? parseInt(req.body.intensity) : 1;
     Exercise.find({}).then(exercises => {
         const lenExe = exercises.length;
@@ -14,15 +14,9 @@ router.post("/", (req, res)=>{
             let randomNum = Math.floor(Math.random()*lenExe);
             while(true){
                 while (workoutNums.includes(randomNum)) { randomNum = Math.floor(Math.random() * lenExe) }
-                if(categories.length === 0 || !(categories instanceof Array)){break;}
-                const found = false;
-                for(let i = 0; i < categories.length; i++){
-                    if(exercises[randomNum].categories.includes(categories[i])){
-                        found = true;
-                        break;
-                    }
+                if(categories !== "" && exercises[randomNum].categories.includes(categories)){
+                    break;
                 }
-                if(found){break;}
             }
             const rW = exercises[randomNum]; // random Workout
             workoutObject[rW.name] = {
