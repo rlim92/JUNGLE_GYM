@@ -33,6 +33,24 @@ router.post("/", (req, res)=>{
     })
 })
 
+router.get("/all", (req,res)=>{
+    Exercise.find({}).then(exercises => {
+        let workoutObject = {};
+        for(let i = 0; i < exercises.length; i++){
+            const workout = exercises[i]; // 
+            workoutObject[workout.name] = {
+                    id: workout.id,
+                    name: workout.name,
+                    categories: workout.category,
+                    description: workout.description,
+                    reps: (workout.reps) ? workout.reps : null,
+                    seconds: (workout.seconds) ? workout.seconds : null,
+            };
+        }
+        res.json(workoutObject)
+    })
+})
+
 // router.get("/", (req,res)=>{
 //     Exercise.find({}).then(all => res.json(all));
 // })
