@@ -9,9 +9,9 @@ router.get("/", (req, res) => {
 router.post("/", (req,res) =>{
     const newWorkout = new Workout({
         exercises_done:req.body.exercises_done,
-        location_id: req.body.location_id,
-
+        user_id: req.body.user_id,
     })
+    return newWorkout;
 })
 
 router.get("/user/:user_id", (req, res) => {
