@@ -11,3 +11,8 @@ export const fetchExercises = (formData) => dispatch => {
     return ApiUtil.fetchExercises(formData)
         .then(exercises => { return dispatch(receiveExercises(exercises)) })
 };
+
+export const fetchPersonalExercises = () => dispatch => {
+    return ApiUtil.fetchPersonalExercises()
+        .then(exercises => { return dispatch(receiveExercises(exercises)) })
+};

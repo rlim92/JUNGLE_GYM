@@ -25,14 +25,17 @@ class CustomWorkoutForm extends React.Component {
 		let personalExercise = [];
 		exercises.map(exer => {
 			personalExercise.push(
-      <li>
-        <input
-          type="checkbox"
-          id="peExercise"
-          className="customCheckbox"
-          value={exer.name}
-          onChange={this.update("exercise")}
-        />
+      <li key={exer.name}>
+		<label> {exer.name}
+			<input
+			type="checkbox"
+			id="peExercise"
+			className="customCheckbox"
+			value={exer.name}
+			onChange={this.update("exercise")}
+			/>
+		</label>
+		<p>{exer.description}</p>
       </li>
 		);
 		})

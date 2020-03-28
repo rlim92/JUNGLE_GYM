@@ -31,9 +31,9 @@ router.post("/", (req, res)=>{
     })
 })
 
-// router.get("/", (req,res)=>{
-//     Exercise.find({}).then(all => res.json(all));
-// })
+router.get("/", (req,res)=>{
+    Exercise.find({}).then(all => res.json(all));
+})
 
 router.get("/:name", (req, res)=>{
     Exercise.findOne({name: req.params.name}).then(exercise => res.json(exercise));
