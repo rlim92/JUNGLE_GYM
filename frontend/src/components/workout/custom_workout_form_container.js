@@ -1,9 +1,10 @@
-import { fetchPersonalExercises } from "../../actions/personal_exercises_action";
+import { fetchPersonalExercises } from "../../actions/exercises_action";
+import { fetchCustomExercises } from "../../actions/personal_exercises_action";
 import { connect } from 'react-redux';
 import CustomWorkoutForm from './custom_workout_form';
 
 const mSTP = state => {
-	// debugger;
+
 	return {
 		personalExercises: Object.values(state.entities.exercises)
 		// personalExercises: state.entities.exercises
@@ -12,7 +13,8 @@ const mSTP = state => {
 
 
 const mDTP = dispatch => ({
-	fetchPersonalExercises: (formData) => dispatch(fetchPersonalExercises(formData))
+	fetchPersonalExercises: () => dispatch(fetchPersonalExercises()),
+	fetchCustomExercises: formData => dispatch(fetchCustomExercises(formData))
 });
 
 export default connect(mSTP, mDTP)(CustomWorkoutForm);

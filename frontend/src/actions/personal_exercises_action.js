@@ -2,13 +2,13 @@ import * as ApiUtil from "../util/personal_exercises_api";
 
 export const RECEIVE_PERSONAL_EXERCISES = "RECEIVE_PERSONAL_EXERCISES";
 
-const receivePersonalExercises = personalExercises => ({
+const receiveCustomExercises = customExercises => ({
   type: RECEIVE_PERSONAL_EXERCISES,
-  personalExercises
+  customExercises
 });
 
-export const fetchPersonalExercises = formData => dispatch => {
-  return ApiUtil.fetchPersonalExercises(formData).then(personalExercises => {
-    return dispatch(receivePersonalExercises(personalExercises));
+export const fetchCustomExercises = formData => dispatch => {
+  return ApiUtil.fetchCustomExercises(formData).then(customExercises => {
+    return dispatch(receiveCustomExercises(customExercises));
   });
 };

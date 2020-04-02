@@ -35,10 +35,10 @@ class Workout extends React.Component {
 
   handleSubmitTwo(e) {
     e.preventDefault();
-    this.props.fetchPersonalExercises()
-      .then(
-        this.props.history.push('/personal')
-      )
+    // this.props.fetchPersonalExercises()
+    //   .then(
+    this.props.history.push('/personal')
+      // )
   }
 
   render(){

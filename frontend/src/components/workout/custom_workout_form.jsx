@@ -9,10 +9,14 @@ class CustomWorkoutForm extends React.Component {
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
+	componentDidMount() {
+		this.props.fetchPersonalExercises();
+	}
+
 	handleSubmit(e) {
 		e.preventDefault()
 
-		this.props.fetchPersonalExercises(this.props.personalExercises)
+		this.props.fetchCustomExercises(this.props.personalExercises)
 			.then(this.props.history.push('/workout'))
 	}
 
@@ -25,18 +29,19 @@ class CustomWorkoutForm extends React.Component {
 		let personalExercise = [];
 		exercises.map(exer => {
 			personalExercise.push(
-      <li key={exer.name}>
-		<label> {exer.name}
-			<input
-			type="checkbox"
-			id="peExercise"
-			className="customCheckbox"
-			value={exer.name}
-			onChange={this.update("exercise")}
-			/>
-		</label>
-		<p>{exer.description}</p>
-      </li>
+				<li className="personalExercises" key={exer.name}>
+					<div> 
+							<input
+							type="checkbox"
+							id="peExercise"
+							className="customCheckbox"
+							value={exer.name}
+							onChange={this.update("exercise")}
+							/>
+						{exer.name}
+					</div>
+      	</li>
+			// <p>{exer.description}</p>
 		);
 		})
 		return (
@@ -55,6 +60,7 @@ class CustomWorkoutForm extends React.Component {
                 </div>
               </div>
             </div>
+						<button className="customWorkoutBtn">Submit</button>
           </form>
         </div>
       </div>

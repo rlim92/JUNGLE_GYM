@@ -1,5 +1,5 @@
 import axios from "axios";
 
-export const fetchPersonalExercises = formData => {
+export const fetchCustomExercises = formData => {
   return axios.post("api/exercises", {category: "Upper Body"});
 };
