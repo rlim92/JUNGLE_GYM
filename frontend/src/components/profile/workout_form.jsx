@@ -30,7 +30,6 @@ class Workout extends React.Component {
     // debugger;
     this.props.fetchExercises(this.state)
       .then( () => this.props.history.push('/workout') )
-
   }
 
   handleSubmitTwo(e) {

@@ -5,6 +5,9 @@ import customWorkoutCSS from "./_custom_workout.css";
 class CustomWorkoutForm extends React.Component {
 	constructor(props) {
 		super(props)
+		this.state = {
+			customWorkout: this.props.customWorkout
+		}
 		
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
@@ -20,23 +23,37 @@ class CustomWorkoutForm extends React.Component {
 			.then(this.props.history.push('/workout'))
 	}
 
-	update(field) {
-		return e => this.setState({ [field]: e.currentTarget.value })
+	update(e) {
+		const newWorkout = this.state.customWorkout;
+		if (e.target.checked) {
+			newWorkout.push(e.target.value)
+		} else {
+			const index = newWorkout.indexOf(e.target.value);
+			if (index > -1){
+				newWorkout.splice(index, 1)
+			}
+		}
+		this.setState({customWorkout: newWorkout})
 	}
 
 	render() {
 		let exercises = this.props.personalExercises ? this.props.personalExercises : [];
 		let personalExercise = [];
 		exercises.map(exer => {
+			let check = false;
+			if (this.state.customWorkout.include(exer.name)){
+				check = true;
+			}
 			personalExercise.push(
 				<li className="personalExercises" key={exer.name}>
 					<div> 
 							<input
+							checked={check}
 							type="checkbox"
-							id="peExercise"
+							id={exer.name}
 							className="customCheckbox"
 							value={exer.name}
-							onChange={this.update("exercise")}
+							onChange={this.update}
 							/>
 						{exer.name}
 					</div>

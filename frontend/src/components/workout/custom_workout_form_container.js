@@ -6,8 +6,8 @@ import CustomWorkoutForm from './custom_workout_form';
 const mSTP = state => {
 
 	return {
-		personalExercises: Object.values(state.entities.exercises)
-		// personalExercises: state.entities.exercises
+		personalExercises: Object.values(state.entities.exercises),
+		customWorkout: []
 	}
 }
 
