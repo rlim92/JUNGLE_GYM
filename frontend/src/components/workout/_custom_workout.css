@@ -1,0 +1,81 @@
+/* .customWorkoutForm {
+	display: flex;
+	
+}
+
+.checkboxInput {
+	display: flex;
+	flex-direction: column;
+}
+
+.categoryWrapper {
+	display: flex;
+	
+} */
+
+
+.personalExercises > div {
+	display: inline-block;
+}
+
+.peInput > ul {
+	list-style: none;
+}
+
+.customCheckbox {
+	width: auto;
+	margin-right: 10px;
+	cursor: pointer;
+}
+/* 
+.customWorkoutForm {
+  background-color: #212121;
+  height: calc( 100vh );
+  width: 100vw;
+  background-image: url("https://images.pexels.com/photos/373984/pexels-photo-373984.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-size: cover;
+} */
+
+.formWrapper {
+	/* display: flex; */
+	margin-top: 80px;
+	padding: 40px;
+	padding-right: 60px;
+	height: 45%;
+	background-color: #6d947b;
+	border-radius: 5px;
+	font-family: "Roboto", sans-serif;
+	color: white;
+}
+
+
+/* .formWrapper {
+	display: flex;
+	margin-top: 80px;
+	padding: 40px;
+	padding-right: 60px;
+	height: 45%;
+	background-color: #6d947b;
+	border-radius: 5px;
+	font-family: "Roboto", sans-serif;
+	color: white;
+}
+
+.createWorkout {
+	width: 70%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 16px;
+	line-height: 24px;
+	background-color: darkslategray;
+	color: #fff;
+	height: 44px;
+	min-width: 130px;
+	min-height: 44px;
+	transition: background-color .17s ease,color .17s ease;
+	border-radius: 3px;
+	border: none;
+	font-weight: 500px;
+	cursor: pointer;
+	font-family: "Roboto", sans-serif;
+} */

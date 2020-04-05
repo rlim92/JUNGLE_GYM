@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import WorkoutForm from "./workout_form";
-import { fetchExercises } from '../../actions/exercises_action';
+import { fetchExercises, fetchPersonalExercises } from '../../actions/exercises_action';
 
 const mSTP = (state, ownProps) => {
     return {}
@@ -9,7 +9,8 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => {
     return {
-        fetchExercises: (formData) => dispatch(fetchExercises(formData))
+        fetchExercises: (formData) => dispatch(fetchExercises(formData)),
+        fetchPersonalExercises: () => dispatch(fetchPersonalExercises())
     };
 };
 
