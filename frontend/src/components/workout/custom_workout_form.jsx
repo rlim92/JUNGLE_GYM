@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import customWorkoutCSS from "./_custom_workout.css";
+import Navbar from "../nav/navbar";
+import NavBar from '../nav/navbar';
 
 class CustomWorkoutForm extends React.Component {
 	constructor(props) {
@@ -8,7 +10,7 @@ class CustomWorkoutForm extends React.Component {
 		this.state = {
 			customWorkout: this.props.customWorkout
 		}
-		
+		this.update = this.update.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
@@ -18,15 +20,16 @@ class CustomWorkoutForm extends React.Component {
 
 	handleSubmit(e) {
 		e.preventDefault()
-
-		this.props.fetchCustomExercises(this.props.personalExercises)
+		// debugger;
+		this.props.fetchCustomExercises(this.state)
 			.then(this.props.history.push('/workout'))
 	}
 
 	update(e) {
-		const newWorkout = this.state.customWorkout;
+		let newWorkout = (this.state.customWorkout);
 		if (e.target.checked) {
 			newWorkout.push(e.target.value)
+			
 		} else {
 			const index = newWorkout.indexOf(e.target.value);
 			if (index > -1){
@@ -34,6 +37,7 @@ class CustomWorkoutForm extends React.Component {
 			}
 		}
 		this.setState({customWorkout: newWorkout})
+		console.log(this.state.customWorkout)
 	}
 
 	render() {
@@ -41,7 +45,7 @@ class CustomWorkoutForm extends React.Component {
 		let personalExercise = [];
 		exercises.map(exer => {
 			let check = false;
-			if (this.state.customWorkout.include(exer.name)){
+			if (this.state.customWorkout.includes(exer.name)){
 				check = true;
 			}
 			personalExercise.push(
@@ -58,11 +62,11 @@ class CustomWorkoutForm extends React.Component {
 						{exer.name}
 					</div>
       	</li>
-			// <p>{exer.description}</p>
 		);
 		})
 		return (
       <div className="customWorkoutForm">
+				<NavBar/> 
         <div className="formWrapper">
           <form onSubmit={this.handleSubmit}>
             <div className="personalExercises">

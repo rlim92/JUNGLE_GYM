@@ -4,8 +4,9 @@ const Exercise = require("../../models/Exercise");
 
 router.post("/", (req, res)=>{
     const limit = 3;
-    const query = (req.body.category) ? {category: req.body.category} : {};
+    let query = (req.body.category) ? {category: req.body.category} : {};
     const intensity = (req.body.intensity) ? parseInt(req.body.intensity) : 1;
+    query = (req.body.customWorkout) ? {name: req.body.customWorkout} : query;
     Exercise.find(query).then(exercises => {
         const lenExe = exercises.length;
         if(lenExe <= limit){
