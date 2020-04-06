@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import customWorkoutCSS from "./_custom_workout.css";
-import Navbar from "../nav/navbar";
 import NavBar from '../nav/navbar';
+import Footer from '../footer/footer';
 
 class CustomWorkoutForm extends React.Component {
 	constructor(props) {
@@ -37,7 +37,7 @@ class CustomWorkoutForm extends React.Component {
 			}
 		}
 		this.setState({customWorkout: newWorkout})
-		console.log(this.state.customWorkout)
+		
 	}
 
 	render() {
@@ -49,8 +49,8 @@ class CustomWorkoutForm extends React.Component {
 				check = true;
 			}
 			personalExercise.push(
-				<li className="personalExercises" key={exer.name}>
-					<div> 
+				<li className="personalExercises" >
+					<div className="checkbox-container" key={exer.name}>  
 							<input
 							checked={check}
 							type="checkbox"
@@ -59,89 +59,46 @@ class CustomWorkoutForm extends React.Component {
 							value={exer.name}
 							onChange={this.update}
 							/>
-						{exer.name}
+						<div>{exer.name}</div>
 					</div>
-      	</li>
+      </li>
 		);
 		})
+
 		return (
+
       <div className="customWorkoutForm">
 				<NavBar/> 
         <div className="formWrapper">
-          <form onSubmit={this.handleSubmit}>
+          <form className="exer-form" onSubmit={this.handleSubmit}>
             <div className="personalExercises">
               <h3 className="exerciseTitle">Exercises</h3>
               <div className="peCheckbox">
                 <div className="peWrapper">
                   <div className="peInput">
-                    <ul>
-                      {personalExercise}
+                    <ul className="exer-ul">
+                      {personalExercise.splice(0,15)}
                     </ul>
                   </div>
+									<div className="peInput">
+										<ul className="exer-ul">
+											{personalExercise.splice(0, 15)}
+										</ul>
+									</div>
                 </div>
               </div>
             </div>
 						<button className="customWorkoutBtn">Submit</button>
-          </form>
+          </form>	
+					<div className="selected-exercises">
+						{this.state.customWorkout}
+					</div>
         </div>
+				<Footer/>
       </div>
     );
 	}
 }
 
 export default CustomWorkoutForm;
-	// <div className="customWorkoutForm">
-	//   <div className="formWrapper">
-	//     <form onSubmit={this.handleSubmit}>
-	//       <div className="categories">
-	//         <h3 className="categoryTitle">Exercises</h3>
-	//         <div className="categoryCheckbox">
-	//           <div className="checkboxInput">
-	// 						<div className="categoryWrapper">
-	// 							<input
-	// 								type="checkbox"
-	// 								className="customCheckbox"
-	// 								id="upperBody"
-	// 								value={this.state.category}
-	// 								onChange={this.update("category")}
-	// 							/>
-	// 							<label for="upperBody" className="upperLabel">Upper Body</label>
-	// 						</div>
-	// 						<input
-	// 							type="checkbox"
-	// 							className="customCheckbox"
-	// 							id="lowerBody"
-	// 							value={this.state.category}
-	// 							onChange={this.update("category")}
-	// 						/>
-	// 						<label for="lowerBody" className="lowerLabel">Lower Body</label>
-	// 						<input
-	// 							type="checkbox"
-	// 							className="customCheckbox"
-	// 							id="core"
-	// 							value={this.state.category}
-	// 							onChange={this.update("category")}
-	// 						/>
-	// 						<label for="core" className="coreLabel">Core</label>
-	//           </div>
-	//         </div>
-	//       </div>
-	//       <div className="exercises">
-	//         <div className="exerciseCheckbox">
-	//           <div className="checkboxInput">
-	//               <input
-	//                 type="checkbox"
-	//                 className="customCheckbox"
-	//                 id="exercises"
-	//                 value={this.props.exercises[0]}
-	//                 onChange={this.update("exercises")}
-	//               />
-	// 						<label for="exercises">Exercises</label>
-	//           </div>
-	//         </div>
-	//       </div>
-	//       <button className="createWorkout">Create</button>
-	//     </form>
-	//   </div>
-	// </div>
 
