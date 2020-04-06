@@ -96,6 +96,7 @@ class CustomWorkoutForm extends React.Component {
         </div>
 				<Footer/>
       </div>
+			
     );
 	}
 }
