@@ -27,6 +27,7 @@
   height: 100%;
   width: 100%;
   margin-top: 20px;
+  margin-bottom: 1000px;
 }
 
 .workoutFormButton{
@@ -46,6 +47,7 @@
   font-weight: 500px;
   cursor: pointer;
   font-family: "Roboto", sans-serif;
+  margin-bottom: 30px;
 }
 
 .workoutFormButton:hover {

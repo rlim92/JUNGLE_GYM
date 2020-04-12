@@ -109,6 +109,9 @@ class Workout extends React.Component {
                   </label>
                 </div>
                 </div>
+                <button className="workoutFormButton">
+                  Submit
+                </button>
                 <div className="custom-workout">
                   <span>or</span>
                   <button onClick={this.handleSubmitTwo} 
@@ -116,9 +119,6 @@ class Workout extends React.Component {
                           Custom Workout
                   </button>
                 </div>
-                <button className="workoutFormButton">
-                  Submit
-                </button>
               </form>
             </div>
           </div>

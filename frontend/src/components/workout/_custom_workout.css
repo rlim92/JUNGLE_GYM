@@ -48,6 +48,68 @@
 	color: white;
 }
 
+.custom-workout-button {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: darkslategray;
+  color: #fff;
+  height: 44px;
+  min-width: 130px;
+  min-height: 44px;
+  transition: background-color .17s ease,color .17s ease;
+  border-radius: 3px;
+  border: none;
+  font-weight: 500px;
+  cursor: pointer;
+	font-family: "Roboto", sans-serif;
+	margin-bottom: 10px;
+}
+
+.custom-workout-button:hover {
+  background-color: antiquewhite;
+  color: #6d947b;
+}
+
+.custom-workout {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 10px;
+}
+
+.custom-workout > span {
+	text-align: center;
+	padding-bottom: 30px;
+}
+
+.customWorkoutBtn {
+	width: 10%;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 16px;
+	line-height: 24px;
+	background-color: darkslategray;
+	color: #fff;
+	height: 44px;
+	min-width: 130px;
+	min-height: 44px;
+	transition: background-color .17s ease,color .17s ease;
+	border-radius: 3px;
+	border: none;
+	font-weight: 500px;
+	cursor: pointer;
+	font-family: "Roboto", sans-serif;
+	margin-bottom: 30px;
+	margin-left: 38px;
+}
+
+.customWorkoutBtn:hover {
+	background-color: antiquewhite;
+  color: #6d947b;
+}
+
 
 /* .formWrapper {
 	display: flex;
