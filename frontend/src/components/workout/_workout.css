@@ -4,7 +4,7 @@
   justify-content: space-between;
   background-image: url(https://images.pexels.com/photos/1466852/pexels-photo-1466852.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260);
   background-size: cover;
-  height: calc( 100vh - 100px);
+  height: calc( 100vh - 80px);
 }
 
 .workout-container{
