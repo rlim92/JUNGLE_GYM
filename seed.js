@@ -29,7 +29,7 @@ const exercises = [
         reps: 5,
         seconds: null
     }, {
-        name: "Dips",
+        name: "Bench Dips",
         categories: ["Upper Body"],
         description: "Find a bench or surface you can grip (around knee level). Sit on the bench, place your hands on the edge of the surface and move yoour hip forward. Fold your arms and knees and bring your body down until your back touches the surface. Don't lean too forward. Then move your body up again. You can position your legs a bit forward to make the exercise a bit harder.",
         reps: 5,
@@ -196,6 +196,114 @@ const exercises = [
         description: "Start standing with both hands held out, palms down. Drive right knee to right palm. Immediately drive left knee to left palm as you return right leg to starting position. Stay light on your toes and the balls of your feet. Continue to repeat as fast as possible.",
         reps: 10,
         seconds: null,
+    },{
+        name: "Hollow Hold",
+        categories: ["Core"],
+        description: "Lay flat with your back towards the floor and contract the abs, pulling the belly button towards the floor. The arms and legs should be held straight out from the body with hands and toes pointed. Slowly raise shoulders and legs from ground.",
+        reps: null,
+        seconds: 20,
+    }, {
+        name: "V Ups",
+        categories: ["Core"],
+        description: "Lie on a mat with your back to the floor, legs fully extended, and your arms extended above your head. Raise both legs and your torso simultaneously and reach toward your feet. Return to starting position and repeat until set is complete.",
+        reps: 10,
+        seconds: null,
+    },{
+        name: "Crunches",
+        categories: ["Core"],
+        description: "Lie on the floor with your back to the ground and your knees bent facing up. Now lift upper body towards your knees. Go back to starting position slowly and repeat until set is complete.",
+        reps: 10,
+        seconds: null,
+    }, {
+        name: "Flutter Kicks",
+        categories: ["Core"],
+        description: "Lie on the floor with your back to the ground and hands facing down. Lift your head, neck, and shoulders slightly off the ground. Keeping your legs stick straight and glued together with your toes pointed, start lowering one leg. Raise your lowered leg and lower the other one, focusing on keeping your core engaged. Continue alternating until the set is complete.",
+        reps: 10,
+        seconds: null,
+    }, {
+        name: "Incline Pushups",
+        categories: ["Upper Body"],
+        description: "Find an elevated surface like a bench. Put your hands on the edge of the bench just slightly wider than shoulder width. Your arms are straight but elbows are not locked. Align your feet so that your arms and body are completely straight. Bend your elbows to slowly lower your chest to the edge of the surface while inhaling. Keep your body straight and rigid throughout the movement. Push your body away from the surface until your elbows are extended, but not locked. Exhale as you push up. Repeat until your set is complete. ",
+        reps: 10,
+        seconds: null,
+    }, {
+        name: "Hanging Knee Raises",
+        categories: ["Core"],
+        description: "Start by hanging on a pull-up bar with palms facing out. Pull your shoulder blades down your back to keep your shoulders away from you ears. Engage your abs as you simultaneously lift both knees up to your chest with control. Lower your legs down slowly and returning to the starting position. This completes one rep. Complete two sets of 10 reps. Avoid swinging during this move to ensure that you're really working your abs.",
+        reps: 10,
+        seconds: null,
+    }, {
+        name: "Reverse Crunches",
+        categories: ["Core"],
+        description: "Lying on your back, lift your legs in the air with your knees bent. Place your hands on the floor beside you. Without momentum, use your lower abs to slowly curl the hips off the floor and into your chest. Slowly lower them back to the starting position. That completes one rep.",
+        reps: 10,
+        seconds: null,
+    }, {
+        name: "Seated Leg Tucks",
+        categories: ["Core"],
+        description: "Sit down with your hands on the surface you're sitting on, your legs fully extended and lean back. Bend your legs and bring your knees toward your chest. Hold for a second or two then fully extend your legs without touching the surface you're sitting on. Repeat until set is complete.",
+        reps: 10,
+        seconds: null,
+    }, {
+        name: "Bench Pistol Squat",
+        categories: ["Core"],
+        description: "Stand in front of a bench so that if you were to bend down, you would sit on the bench. Bend one knee with the other leg facing out and both arms facing forward until your butt touches the bench. Do all the reps on one leg then alternate to the other leg.",
+        reps: 5,
+        seconds: null,
+    }, {
+        name: "Pistol Squat",
+        categories: ["Core"],
+        description: "Stand on one leg with the other leg straight facing out and arms forward. Bend the knee of the leg you're standing on until your butt is close to the ground. Repeat this exercise until your set is done then alternate to the other leg.",
+        reps: 5,
+        seconds: null,
+    }, {
+        name: "Type Writer Pull Up",
+        categories: ["Upper Body", "Core"],
+        description: "Start with a wide grip on pull up bars. Pull up to your right side so your body is close to your right hand. Now move your body towards your left hand. Repeat this side to side movement for the required number of reps.",
+        reps: 10,
+        seconds: null,
+    }, {
+        name: "Pike Push Ups",
+        categories: ["Upper Body"],
+        description: "Place hands on ground at shoulder width. Your body should be in the shape of an A with straight knees. Start going down by bending your elbows. Then push up. Repeat until you complete all the reps.",
+        reps: 10,
+        seconds: null,
+    }, {
+        name: "Wall Push Ups",
+        categories: ["Upper Body"],
+        description: "Find a wall you can push against. Stand a little farther than arms length away with your feet shoulder-width apart. Lean your body forward and put your palms flat against the wall at shoulder height. Begin bending your elbows so your face is close to the wall. Now push out. Repeat this exercise until you finish the reps.",
+        reps: 10,
+        seconds: null,
+    }, {
+        name: "Jump Squats",
+        categories: ["Lower Body"],
+        description: "Stand tall with your feet hip-width apart. Hinge at the hips to push your butt back and lower down until your thighs are parallel to the floor. Then press your feet down to explode off the floor and jump as high as you can. Allow your knees to bend 45 degrees when you land, and then immediately drop back down into a squat, and jump again.",
+        reps: 10,
+        seconds: null,
+    }, {
+        name: "Wide Squats",
+        categories: ["Lower Body"],
+        description: "Stand with your feet slightly wider than shoulder width apart. Angle your feet outward at about 45 degrees. Cross your arms in front of you so that you hands are resting on your shoulders. Bend your knees and dropdown as low as you can. Push the ground away from you and repeat.",
+        reps: 10,
+        seconds: null,
+    }, {
+        name: "Dragonflies",
+        categories: ["Core"],
+        description: "Get into proper position by locking your arms in a fixed overhead position. You can do this on a bench, with your hand next to your head and gripping the sides of the bench, or you can grip a stable object overhead. Some people use kettlebels or a barbell, but using something fixed and stable is a bit more practical, and quite a bit safer. Contract your torso and drive your legs up as if you are performing a reverse crunch, but keep your body rigid from your shoulders to toes, and avoid bending the hips. Point your toes to help maintain proper body alignment. Once lifted, slowly lower your legs in a controller motion without etting any part of your body touch the bench other than upper back and shoulder. If you cave in, drop your hips, or arch your back, you don't have the strength yet and should not continue this exercise. Lower your body until it is hovering just over the bench. Repeat for the given reps.",
+        reps: 4,
+        seconds: null,
+    }, {
+        name: "Bear Crawl",
+        categories: ["Core"],
+        description: "Start on your hands and feet with your knees bent. Start walking forward on your hands and feet. Move your right leg with your left arm and left leg with your right arm.",
+        reps: 10,
+        seconds: null,
+    }, {
+        name: "L-Sit",
+        categories: ["Core", "Upper Body"],
+        description: "Sit on the floor with your feet straight out and palms on the floor slightly in front of your butt. Press the floor away from you. Do not shrug, so keep your shoulders down. For an advanced version, try lifting your feet off the ground.",
+        reps: null,
+        seconds: 20,
     }]
 
 module.exports = () => {
