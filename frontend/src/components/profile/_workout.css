@@ -58,7 +58,7 @@
 .categoryDropdown{
   display: flex;
   width: 100%;
-  height: 65%;
+  height: 300px;
   justify-content: center;
 }
 

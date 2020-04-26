@@ -113,7 +113,7 @@ class Workout extends React.Component {
                   Submit
                 </button>
                 <div className="custom-workout">
-                  <span>or</span>
+                  {/* <span>or</span> */}
                   <button onClick={this.handleSubmitTwo} 
                           className="custom-workout-button">
                           Custom Workout
