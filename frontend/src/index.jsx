@@ -22,7 +22,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		//if users token has expired
 		if(decodedUser.exp < currentTime) {
 			store.dispatch(logout());
-			window.location.href = '/login';
 		}
 	} else {
 		store = configureStore();
