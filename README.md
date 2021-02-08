@@ -1,4 +1,5 @@
 # Jungle Gym
+[View Live Site Here](https://jg-gym.herokuapp.com/#/)
 
 This app is meant to be for individuals who are travelling, commuting, or just walking outside in general and want to get a weight-free, gym-free workout in. The app will generate a workout based off user input and then generate locations that have jungle-gyms or parks where the workout can be performed.
 
